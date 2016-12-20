@@ -22,10 +22,13 @@ export default class LoginController extends Component {
     }
 
     onChangeHandler(event) {
-
+        let newState={};
+        newState[event.target.name]=event.target.value;
+        this.setState(newState);
     }
 
     onSubmitHandler(event) {
-
+        event.preventDefault();
+        alert(this.state.username+" "+this.state.password);
     }
 }

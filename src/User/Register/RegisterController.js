@@ -6,17 +6,18 @@ export default class RegisterController extends Component {
         super(props);
         this.state={
             username:'',
-            password:''
+            password:'',
+            repeat:''
         };
     }
 
     render() {
         return (
             <div>
-                <h1>Register Form</h1>
                 <RegisterForm
                 username={this.state.username}
                 password={this.state.password}
+                repeatpass={this.state.repeat}
                 onChangeHandler={this.onChangeHandler.bind(this)}
                 onSubmitHandler={this.onSubmitHandler.bind(this)}
                 />

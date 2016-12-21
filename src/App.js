@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
-import Navigation from './Common/NavigationBar';
-import Footer from './Common/Footer';
+import Navigation from './Components/Common/NavigationBar';
+import Footer from './Components/Common/Footer';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 export default class App extends Component {

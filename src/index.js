@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
-import Home from './Home/HomeView';
-import Navigation from './Common/NavigationBar';
+import Home from './Components/Home/HomeView';
+import Navigation from './Components/Common/NavigationBar';
 import Register from './User/Register/RegisterController';
 import Login from './User/Login/LoginController';
 import 'bootstrap/dist/css/bootstrap.min.css'

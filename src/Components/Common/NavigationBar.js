@@ -11,8 +11,8 @@ export default class NavigationBar extends Component {
                     </div>
                         <ul className="nav navbar-nav">
                             <li><Link to="/home">Home</Link></li>
-                            <li><a href="#">Page 1</a></li>
-                            <li><a href="#">Page 2</a></li>
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">Contact</a></li>
                         </ul>
                         <ul className="nav navbar-nav navbar-right">
                             <li><Link to="/register"><span className="glyphicon glyphicon-user"></span> Register</Link></li>

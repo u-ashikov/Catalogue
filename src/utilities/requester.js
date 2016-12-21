@@ -14,7 +14,7 @@ export default class Requester {
             case 'Kinvey':
                 this.authorization={'Authorization':'Kinvey '+sessionStorage.getItem('authToken')};
                 break;
-            default:throw new Error('This is not a valid authorization type!');break;
+            default:console.log('Invalid authentication Type!');break;
         }
     }
 

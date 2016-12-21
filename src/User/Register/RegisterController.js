@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
-import RegisterForm from './RegisterForm'
+import RegisterForm from './RegisterForm';
+import UserModel from '../../Models/UserModel';
+import SessionManager from '../../utilities/SessionManager';
+import {browserHistory} from 'react-router';
 
 export default class RegisterController extends Component {
     constructor(props) {
@@ -33,6 +36,18 @@ export default class RegisterController extends Component {
 
     onSubmitHandler(event) {
         event.preventDefault();
-        alert('username: '+this.state.username+" password: "+this.state.password);
+        let userData={
+            username:this.state.username,
+            password:this.state.password
+        };
+
+        UserModel.registerUser(userData)
+            .then(function (user) {
+                SessionManager.saveSession(user);
+                browserHistory.push('/home');
+            })
+            .catch(function (err) {
+                console.log(err);
+            })
     }
 }

@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 import LoginForm from './LoginForm';
+import UserModel from '../../Models/UserModel';
+import SessionManager from '../../utilities/SessionManager';
+import {browserHistory} from 'react-router';
 
 export default class LoginController extends Component {
     constructor(props) {
@@ -29,6 +32,20 @@ export default class LoginController extends Component {
 
     onSubmitHandler(event) {
         event.preventDefault();
-        alert(this.state.username+" "+this.state.password);
+        let username=this.state.username;
+        let password=this.state.password;
+        let userData={
+            'username':username,
+            'password':password
+        };
+
+        UserModel.loginUser(userData)
+            .then(function (user) {
+                SessionManager.saveSession(user);
+                browserHistory.push('/home');
+            })
+            .catch(function (err) {
+                console.log(err);
+            })
     }
 }

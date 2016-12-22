@@ -31,7 +31,7 @@ export default class HomeView extends Component{
     }
 
     onClickHandler(event) {
-        let productType=event.target.innerText;
+        let productType=event.target.textContent;
         browserHistory.push('/'+productType);
     }
 }

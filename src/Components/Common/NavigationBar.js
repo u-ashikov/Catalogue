@@ -26,8 +26,8 @@ export default class NavigationBar extends Component {
                                 <li><Link to="/bracelets">Bracelets</Link></li>
                                 <li><Link to="/rings">Rings</Link></li>
                                 <li><Link to="/earrings">Earrings</Link></li>
-                                <li><a href="#">About</a></li>
-                                <li><a href="#">Contact</a></li>
+                                <li><Link to="/about">About</Link></li>
+                                <li><Link to="/contact">Contact</Link></li>
                             </ul>
                             <ul className="nav navbar-nav navbar-right">
                                 <li><Link to="/logout"><span className="glyphicon glyphicon-log-out"></span>Logout</Link></li>

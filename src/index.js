@@ -6,6 +6,8 @@ import Navigation from './Components/Common/NavigationBar';
 import Register from './Components/User/Register/RegisterController';
 import Login from './Components/User/Login/LoginController';
 import Logout from './Components/User/Logout/LogoutController';
+import About from './Components/About/AboutView';
+import Contact from './Components/Contact/ContactView';
 import Bracelets from './Components/Products/Bracelets/BraceletsController';
 import Rings from './Components/Products/Rings/RingsController';
 import Earrings from './Components/Products/Earrings/EarringsController';
@@ -27,6 +29,8 @@ ReactDOM.render(
            <Route name="Bracelets" path='/bracelets' component={Bracelets}/>
            <Route name="Rings" path='/rings' component={Rings}/>
            <Route name="Earrings" path='/earrings' component={Earrings}/>
+           <Route name="About" path='/about' component={About}/>
+           <Route name="Contact" path='/contact' component={Contact}/>
        </Route>
     </Router>,
   document.getElementById('app')

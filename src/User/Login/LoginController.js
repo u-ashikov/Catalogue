@@ -3,6 +3,7 @@ import LoginForm from './LoginForm';
 import UserModel from '../../Models/UserModel';
 import SessionManager from '../../utilities/SessionManager';
 import {browserHistory} from 'react-router';
+import Alert from 'react-s-alert';
 
 export default class LoginController extends Component {
     constructor(props) {
@@ -42,10 +43,14 @@ export default class LoginController extends Component {
         UserModel.loginUser(userData)
             .then(function (user) {
                 SessionManager.saveSession(user);
+                Alert.closeAll();
+                Alert.success('Successfully logged in!', {
+                    position: 'top-right',
+                    effect: 'stackslide',
+                    timeout: 5000,
+                    offset:30
+                });
                 browserHistory.push('/home');
-            })
-            .catch(function (err) {
-                console.log(err);
-            })
+            });
     }
 }

@@ -3,6 +3,7 @@ import RegisterForm from './RegisterForm';
 import UserModel from '../../Models/UserModel';
 import SessionManager from '../../utilities/SessionManager';
 import {browserHistory} from 'react-router';
+import Alert from 'react-s-alert';
 
 export default class RegisterController extends Component {
     constructor(props) {
@@ -44,10 +45,14 @@ export default class RegisterController extends Component {
         UserModel.registerUser(userData)
             .then(function (user) {
                 SessionManager.saveSession(user);
+                Alert.closeAll();
+                Alert.success('Registration successfully!', {
+                    position: 'top-right',
+                    effect: 'stackslide',
+                    timeout: 5000,
+                    offset:30
+                });
                 browserHistory.push('/home');
-            })
-            .catch(function (err) {
-                console.log(err);
             })
     }
 }

@@ -1,0 +1,19 @@
+.category {
+    border:solid;
+    border-radius: 10px;
+    height: 250px;
+    width: 250px;
+    background-size: 250px 250px;
+    background-repeat: no-repeat;
+}
+
+.category:hover {
+    background: white;
+    cursor: pointer;
+}
+
+.holder .category{
+    display: inline-block;
+    margin:100px 10px 10px 10px;
+
+}

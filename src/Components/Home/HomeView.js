@@ -5,8 +5,17 @@ export default class HomeView extends Component{
         return (
         <div className="container">
             <div className="jumbotron">
-                <h1>Welcome to our Catalog Page!</h1>
-                <h2>Please login or register!</h2>
+                {!sessionStorage.getItem('username') ?
+                    <div>
+                        <h1>Welcome to our Catalog Page!</h1>
+                        <h2>Please login or register!</h2>
+                    </div>
+                    :
+                    <div>
+                        <h1>Welcome to our Catalog Page!</h1>
+                    </div>
+                }
+
             </div>
         </div>
 

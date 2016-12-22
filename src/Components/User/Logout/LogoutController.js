@@ -1,6 +1,6 @@
 import { Component } from 'react';
-import UserModel from '../../Models/UserModel';
-import SessionManager from '../../utilities/SessionManager';
+import UserModel from '../../../Models/UserModel';
+import SessionManager from '../../../utilities/SessionManager';
 import {browserHistory} from 'react-router';
 import Alert from 'react-s-alert';
 

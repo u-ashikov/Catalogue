@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import '../../styles/user-forms.css';
+import '../../../styles/user-forms.css';
 
 export default class RegisterForm extends Component {
     render() {

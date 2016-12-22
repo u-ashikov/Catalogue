@@ -1,31 +1,27 @@
 import React, { Component } from 'react';
-import RegisterForm from './RegisterForm';
-import UserModel from '../../Models/UserModel';
-import SessionManager from '../../utilities/SessionManager';
+import LoginForm from './LoginForm';
+import UserModel from '../../../Models/UserModel';
+import SessionManager from '../../../utilities/SessionManager';
 import {browserHistory} from 'react-router';
 import Alert from 'react-s-alert';
 
-export default class RegisterController extends Component {
+export default class LoginController extends Component {
     constructor(props) {
         super(props);
         this.state={
             username:'',
-            password:'',
-            repeat:''
-        };
+            password:''
+        }
     }
 
     render() {
         return (
-            <div>
-                <RegisterForm
+            <LoginForm
                 username={this.state.username}
                 password={this.state.password}
-                repeatpass={this.state.repeat}
                 onChangeHandler={this.onChangeHandler.bind(this)}
                 onSubmitHandler={this.onSubmitHandler.bind(this)}
-                />
-            </div>
+            />
         )
     }
 
@@ -37,22 +33,24 @@ export default class RegisterController extends Component {
 
     onSubmitHandler(event) {
         event.preventDefault();
+        let username=this.state.username;
+        let password=this.state.password;
         let userData={
-            username:this.state.username,
-            password:this.state.password
+            'username':username,
+            'password':password
         };
 
-        UserModel.registerUser(userData)
+        UserModel.loginUser(userData)
             .then(function (user) {
                 SessionManager.saveSession(user);
                 Alert.closeAll();
-                Alert.success('Registration successfully!', {
+                Alert.success('Successfully logged in!', {
                     position: 'top-right',
                     effect: 'stackslide',
                     timeout: 5000,
                     offset:30
                 });
                 browserHistory.push('/home');
-            })
+            });
     }
 }

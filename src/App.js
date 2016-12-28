@@ -13,7 +13,6 @@ export default class App extends Component {
           <div>
               {this.props.children}
           </div>
-          <Footer/>
           <Alert stack={{limit: 3}} />
       </div>
     );

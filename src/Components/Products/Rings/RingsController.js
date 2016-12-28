@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import SingleProduct from '../SingleProduct/SingleProduct';
+import '../../Products/Rings/rings.css';
 
 export default class RingsController extends Component {
     constructor(props) {
@@ -8,6 +9,9 @@ export default class RingsController extends Component {
     render() {
         return (
         <div className="content">
+            <div className="section-title">
+                <span className="tag tag-colored">Rings</span>
+            </div>
             <div id="wrap">
                 <div id="columns" className="columns_4">
                     <SingleProduct

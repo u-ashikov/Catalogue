@@ -5,7 +5,7 @@ export default class SingleProduct extends Component {
     render() {
         return (
             <figure>
-                <img src={this.props.picture} alt="product"/>
+                <img src={this.props.picture} alt="product" width='190' height='280'/>
                 <figcaption>{this.props.title}</figcaption>
                     <span className="price">
                         {this.props.price}

@@ -69,14 +69,13 @@ div#columns figure {
 }
 
 div#columns figure img {
-    width: 100%;
     border-bottom: 1px solid #ccc;
     padding-bottom: 15px;
     margin-bottom: 5px;
 }
 
 div#columns figure figcaption {
-    font-size: .9rem;
+    font-size: 1.9rem;
     color: #444;
     line-height: 1.5;
     height:60px;
@@ -115,4 +114,46 @@ a.button:hover{
 }
 @media screen and (max-width: 500px) {
     #columns figure { width: 100%;}
+}
+
+.section-title {
+    text-align: center;
+    overflow: hidden;
+    margin-bottom: 1.3em;
+}
+
+.tag {
+    text-transform: uppercase;
+    position: relative;
+    line-height: 2.5em;
+    padding: 0 1em;
+    display: inline-block;
+}
+
+.tag-colored {
+    background-color: #50c9eb;
+    color: #fffbf7;
+}
+
+.tag:before,
+.tag:after {
+    content: "";
+    height: 1px;
+    /* any width higher than the widest part of the page */
+    width: 1000px;
+    position: absolute;
+    top: 50%;
+    display: block;
+}
+
+.tag-colored:before,
+.tag-colored:after {
+    background-color: rgba(0, 0, 0, 0.85);
+}
+
+.tag:before{
+    left: -1000px;
+}
+.tag:after{
+    right: -1000px;
 }

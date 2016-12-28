@@ -6,7 +6,7 @@ import Category from '../Category/Category';
 export default class HomeView extends Component{
     constructor(props) {
         super(props);
-        this.categories=['rings','bracelets','earrings'];
+        this.categories=['necklaces','rings','bracelets','earrings'];
     }
 
     render() {

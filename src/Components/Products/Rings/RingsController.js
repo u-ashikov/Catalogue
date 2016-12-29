@@ -2,10 +2,38 @@ import React, { Component } from 'react';
 import SingleProduct from '../SingleProduct/SingleProduct';
 import '../../Products/Rings/rings.css';
 
+import RingModel from '../../../Models/RingModel';
+
 export default class RingsController extends Component {
     constructor(props) {
-        super(props)
+        super(props);
+        this.state={
+            rings:[]
+        }
     }
+
+    componentDidMount() {
+        let _self=this;
+        RingModel.getAllRings()
+            .then(function (rings) {
+                let allRings=[];
+                for (let ring of rings) {
+                    allRings.push(<SingleProduct
+                        key={ring._id}
+                        id={ring._id}
+                        title={ring.name}
+                        picture={`/pictures/rings/${ring.code}.jpg`}
+                        price={ring.price}
+                        onClickHandler={_self.onClickHandler.bind(this,ring._id)}
+                    />)
+                }
+                _self.setState({rings:allRings});
+            })
+            .catch(function (err) {
+                console.log(err);
+            })
+    }
+
     render() {
         return (
         <div className="content">
@@ -14,49 +42,15 @@ export default class RingsController extends Component {
             </div>
             <div id="wrap">
                 <div id="columns" className="columns_4">
-                    <SingleProduct
-                        title="Ring 1"
-                        picture='/pictures/rings/ring1.jpg'
-                        price="10.99"
-                        onClickHandler={this.onClickHandler.bind(this)}
-                    >
-                    </SingleProduct>
-                    <SingleProduct
-                        title="Ring 1"
-                        picture='/pictures/rings/ring4.jpg'
-                        price="10.99"
-                        onClickHandler={this.onClickHandler.bind(this)}
-                    >
-                    </SingleProduct>
-                    <SingleProduct
-                        title="Ring 1"
-                        picture='/pictures/rings/ring3.jpg'
-                        price="10.99"
-                        onClickHandler={this.onClickHandler.bind(this)}
-                    >
-                    </SingleProduct>
-                    <SingleProduct
-                        title="Ring 1"
-                        picture='/pictures/rings/ring5.jpg'
-                        price="10.99"
-                        onClickHandler={this.onClickHandler.bind(this)}
-                    >
-                    </SingleProduct>
-                    <SingleProduct
-                        title="Ring 1"
-                        picture='/pictures/rings/ring5.jpg'
-                        price="10.99"
-                        onClickHandler={this.onClickHandler.bind(this)}
-                    >
-                    </SingleProduct>
+                    {this.state.rings}
                 </div>
             </div>
         </div>
         )
     }
 
-    onClickHandler(event) {
+    onClickHandler(id,event) {
         event.preventDefault();
-        alert('clicked');
+        alert(id);
     }
 }

@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import SingleProduct from '../SingleProduct/SingleProduct';
 import '../../Products/Rings/rings.css';
+import {browserHistory} from 'react-router';
 
-import RingModel from '../../../Models/RingModel';
+import ProductModel from '../../../Models/ProductModel';
 
 export default class RingsController extends Component {
     constructor(props) {
@@ -14,7 +15,7 @@ export default class RingsController extends Component {
 
     componentDidMount() {
         let _self=this;
-        RingModel.getAllRings()
+        ProductModel.getAllProducts('rings')
             .then(function (rings) {
                 let allRings=[];
                 for (let ring of rings) {
@@ -28,9 +29,6 @@ export default class RingsController extends Component {
                     />)
                 }
                 _self.setState({rings:allRings});
-            })
-            .catch(function (err) {
-                console.log(err);
             })
     }
 
@@ -51,6 +49,6 @@ export default class RingsController extends Component {
 
     onClickHandler(id,event) {
         event.preventDefault();
-        alert(id);
+        browserHistory.push('/rings/'+id);
     }
 }

@@ -8,7 +8,7 @@ export default class Category extends Component {
             >
                 <img src={this.props.picture} alt={this.props.categoryName} className="image"/>
                 <div className="overlay">
-                    <div className="text">{this.props.categoryName}</div>
+                    <div className="text">{this.props.categoryName.toUpperCase()}</div>
                 </div>
             </div>
         )

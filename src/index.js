@@ -11,6 +11,7 @@ import Contact from './Components/Contact/ContactView';
 import Necklaces from './Components/Products/Necklaces/NecklacesController';
 import Bracelets from './Components/Products/Bracelets/BraceletsController';
 import Rings from './Components/Products/Rings/RingsController';
+import Product from './Components/Products/SingleProduct/ProductDetailsController';
 import Earrings from './Components/Products/Earrings/EarringsController';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './index.css';
@@ -29,7 +30,11 @@ ReactDOM.render(
            <Route name="Logout" path='/logout' component={Logout}/>
            <Route name="Necklaces" path="/necklaces" component={Necklaces}/>
            <Route name="Bracelets" path='/bracelets' component={Bracelets}/>
-           <Route name="Rings" path='/rings' component={Rings}/>
+           <Route name="Rings" path="/rings">
+               <IndexRoute component={Rings}/>
+               <Route name="PostLocator" path=":ringID" component={Product}>
+               </Route>
+           </Route>
            <Route name="Earrings" path='/earrings' component={Earrings}/>
            <Route name="About" path='/about' component={About}/>
            <Route name="Contact" path='/contact' component={Contact}/>

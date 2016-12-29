@@ -12,7 +12,7 @@ export default class HomeView extends Component{
     render() {
         return (
         <div className="container">
-                {!sessionStorage.getItem('username') ?
+                {!sessionStorage.getItem('authToken') ?
                     <div className="jumbotron">
                         <h1>Welcome to our Catalog Page!</h1>
                         <h2>Please login or register!</h2>
@@ -21,7 +21,7 @@ export default class HomeView extends Component{
                     <div>
                         <h1>All Products</h1>
                         <div className="holder">
-                            {this.categories.map((category,i)=><Category key={i} categoryName={category} onClickHandler={this.onClickHandler.bind(this)}
+                            {this.categories.map((category,i)=><Category key={i} categoryName={category} picture={`../../../pictures/Category Covers/${category}.jpg`} onClickHandler={this.onClickHandler.bind(this)}
                             />)}
                         </div>
                     </div>
@@ -32,6 +32,7 @@ export default class HomeView extends Component{
 
     onClickHandler(event) {
         let productType=event.target.textContent;
+        console.log(productType);
         browserHistory.push('/'+productType);
     }
 }

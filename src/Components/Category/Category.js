@@ -6,7 +6,10 @@ export default class Category extends Component {
             <div className='category'
                  onClick={this.props.onClickHandler}
             >
-                <h1>{this.props.categoryName}</h1>
+                <img src={this.props.picture} alt={this.props.categoryName} className="image"/>
+                <div className="overlay">
+                    <div className="text">{this.props.categoryName}</div>
+                </div>
             </div>
         )
     }

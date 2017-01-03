@@ -24,6 +24,8 @@ export default class ProductDetails extends Component {
                                 <dd>{this.props.code}</dd>
                                 <dt>Product size</dt>
                                 <dd>{this.props.size}</dd>
+                                <dt>Quantity left</dt>
+                                <dd>{this.props.quantity}</dd>
                             </dl>
                         </div>
                         <div className="pane__section clearfix">

@@ -33,6 +33,7 @@ export default class ProductDetailsController extends Component {
                     description={this.state.productInfo.description}
                     price={this.state.productInfo.price}
                     size={this.state.productInfo.size}
+                    quantity={this.state.productInfo.quantity}
                     picture={`/pictures/${this.props.location.pathname.split('/')[1]}/${this.state.productInfo.code}.jpg`}
                     handlePurchase={this.handlePurchase.bind(this,this.props.params.productID)}
                 />

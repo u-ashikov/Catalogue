@@ -157,3 +157,7 @@ a.button:hover{
 .tag:after{
     right: -1000px;
 }
+
+.product-pic:hover {
+    cursor: pointer;
+}

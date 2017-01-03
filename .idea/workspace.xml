@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b1f7de93-b356-4003-845d-310b8d97604e" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/styles/product-details.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Components/Category/Category.js" afterPath="$PROJECT_DIR$/src/Components/Category/Category.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Components/Home/HomeView.js" afterPath="$PROJECT_DIR$/src/Components/Home/HomeView.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Components/Products/SingleProduct/ProductDetails.js" afterPath="$PROJECT_DIR$/src/Components/Products/SingleProduct/ProductDetails.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Components/Products/SingleProduct/ProductDetailsController.js" afterPath="$PROJECT_DIR$/src/Components/Products/SingleProduct/ProductDetailsController.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/styles/product-details.css" afterPath="$PROJECT_DIR$/src/styles/product-details.css" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -37,7 +32,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="HomeView.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="HomeView.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Components/Home/HomeView.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="288">
@@ -95,11 +90,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="product-details.css" pinned="false" current-in-tab="false">
+      <file leaf-file-name="product-details.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/styles/product-details.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="21" column="14" lean-forward="true" selection-start-line="21" selection-start-column="14" selection-end-line="21" selection-end-column="14" />
+            <state relative-caret-position="297">
+              <caret line="125" column="22" lean-forward="false" selection-start-line="125" selection-start-column="22" selection-end-line="125" selection-end-column="22" />
               <folding />
             </state>
           </provider>
@@ -187,8 +182,8 @@
         <option value="$PROJECT_DIR$/src/Components/Products/SingleProduct/ProductDetailsController.js" />
         <option value="$PROJECT_DIR$/src/Components/Products/SingleProduct/ProductDetails.js" />
         <option value="$PROJECT_DIR$/src/Components/Category/Category.js" />
-        <option value="$PROJECT_DIR$/src/styles/product-details.css" />
         <option value="$PROJECT_DIR$/src/Components/Home/HomeView.js" />
+        <option value="$PROJECT_DIR$/src/styles/product-details.css" />
       </list>
     </option>
   </component>
@@ -535,12 +530,12 @@
       <workItem from="1482243105102" duration="15954000" />
       <workItem from="1482398491387" duration="26911000" />
       <workItem from="1482920940830" duration="33323000" />
-      <workItem from="1483441540051" duration="11250000" />
+      <workItem from="1483441540051" duration="11562000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="97994000" />
+    <option name="totallyTimeSpent" value="98306000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1456" height="876" extended-state="6" />
@@ -876,14 +871,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/styles/product-details.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="21" column="14" lean-forward="true" selection-start-line="21" selection-start-column="14" selection-end-line="21" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Components/Category/Category.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="24">
@@ -909,6 +896,14 @@
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/styles/product-details.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="125" column="22" lean-forward="false" selection-start-line="125" selection-start-column="22" selection-end-line="125" selection-end-column="22" />
+          <folding />
         </state>
       </provider>
     </entry>

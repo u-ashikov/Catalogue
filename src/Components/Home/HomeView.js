@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import '../../styles/categories.css';
 import {browserHistory} from 'react-router';
 import Category from '../Category/Category';
 
@@ -11,7 +10,7 @@ export default class HomeView extends Component{
 
     render() {
         return (
-        <div className="container">
+        <div className="container-category">
                 {!sessionStorage.getItem('authToken') ?
                     <div className="jumbotron">
                         <h1>Welcome to our Catalog Page!</h1>

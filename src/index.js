@@ -33,7 +33,7 @@ ReactDOM.render(
            <Route name="Rings" path="/rings">
                <IndexRoute component={Rings}/>
                <Route
-                   path=":ringID" component={ProductDetails}>
+                   path=":productID" component={ProductDetails}>
                </Route>
            </Route>
            <Route name="Earrings" path='/earrings' component={Earrings}/>

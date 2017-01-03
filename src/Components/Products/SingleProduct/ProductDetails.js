@@ -4,8 +4,11 @@ export default class ProductDetails extends Component {
     render() {
         return (
             <div>
-                <h1>This is product with id:{this.props.id}</h1>
-                <p>`Name: ${this.props.name}`</p>
+                <p>Name: {this.props.name}</p>
+                <p>Code: {this.props.code}</p>
+                <p>Description: {this.props.description}</p>
+                <p>Price: {this.props.price}</p>
+                <p>Size: {this.props.size}</p>
             </div>
         )
     }

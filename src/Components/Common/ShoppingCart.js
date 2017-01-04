@@ -8,9 +8,14 @@ export default class ShoppingCart extends Component {
             <div className="folderTab clearfix">
                 <h3>Shopping cart</h3>
             </div>
-            <div className="botBorder clearfix">
-                <table className="cart">
-                    <thead>
+            {this.props.products.length===0 ?
+                <div className="empty-cart">
+                    Your shopping cart is empty!
+                </div>
+                :
+                <div className="botBorder clearfix">
+                    <table className="cart">
+                        <thead>
                         <tr>
                             <th></th>
                             <th>Product</th>
@@ -18,18 +23,18 @@ export default class ShoppingCart extends Component {
                             <th>Quantity</th>
                             <th className="numCell">Total</th>
                         </tr>
-                    </thead>
-                    <tbody>
-                        {this.props.products.map(item=><tr key={item}>{item}</tr>)}
-                    </tbody>
-                </table>
-                <div className="wrap">
-                    <div className="button clear fleft" onClick={this.props.clearCart}>Clear Cart</div>
-                    <div className="button wish fright">Update Cart</div>
-                </div>
-                <div className="totals">
-                    <table className="totaler">
+                        </thead>
                         <tbody>
+                        {this.props.products.map(item=><tr key={item}>{item}</tr>)}
+                        </tbody>
+                    </table>
+                    <div className="wrap">
+                        <div className="button clear fleft" onClick={this.props.clearCart}>Clear Cart</div>
+                        <div className="button wish fright">Update Cart</div>
+                    </div>
+                    <div className="totals">
+                        <table className="totaler">
+                            <tbody>
                             <tr>
                                 <td>Subtotal</td>
                                 <td>$0.00</td>
@@ -46,11 +51,13 @@ export default class ShoppingCart extends Component {
                                 <td>Grand total</td>
                                 <td>$0.00</td>
                             </tr>
-                        </tbody>
-                    </table>
-                    <div className="button add fright">Check out</div>
+                            </tbody>
+                        </table>
+                        <div className="button add fright">Check out</div>
+                    </div>
                 </div>
-            </div>
+            }
+
         </div>
         )
     }

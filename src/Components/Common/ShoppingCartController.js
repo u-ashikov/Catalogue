@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
 import ShoppingCart from './ShoppingCart';
 import ItemsManager from '../../utilities/ItemsManager';
+import Alert from 'react-s-alert';
+import 'react-s-alert/dist/s-alert-css-effects/flip.css';
 
 export default class ShoppingCartController extends Component {
     constructor(props) {
@@ -28,9 +30,17 @@ export default class ShoppingCartController extends Component {
     }
 
     clearCart(event) {
-        ItemsManager.items=[];
-        this.setState({
-            'productsID':[]
-        });
+        if (ItemsManager.items.length>0) {
+            ItemsManager.items=[];
+            this.setState({
+                'productsID':[]
+            });
+            Alert.success('Item removed from cart!',{
+                position:'top-right',
+                effect:'flip',
+                timeout:3000,
+                offset:30
+            })
+        }
     }
 }

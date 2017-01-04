@@ -25,7 +25,34 @@ export default class ShoppingCart extends Component {
                         </tr>
                         </thead>
                         <tbody>
-                        {this.props.products.map(item=><tr key={item}>{item}</tr>)}
+                        {this.props.products.map(item=>
+                            <tr key={item._id}>
+                                <td>
+                                    {item.name} - {item.description}
+                                </td>
+                                <td className="numCell">
+                                    ${item.price}
+                                </td>
+                                <td className="center">
+                                    <input
+                                        type="number"
+                                        min="1"
+                                        max={item.quantity}
+                                        name="quantityValue"
+                                        className="qty"
+                                        value={this.props.quantityValue}
+                                        onChange={this.props.onChangeHandler}
+                                    />
+                                </td>
+                                <td>
+                                    <div className="button remove">
+                                        X
+                                    </div>
+                                </td>
+                                <td className="numCell">
+                                    ${item.price*this.props.quantityValue}
+                                </td>
+                            </tr>)}
                         </tbody>
                     </table>
                     <div className="wrap">

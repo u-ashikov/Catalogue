@@ -52,7 +52,9 @@ export default class ProductDetailsController extends Component {
             ItemsManager.items.push(id);
             browserHistory.push({
                 pathname:'/shopping-cart',
-                state:{'productID':id}
+                state:{
+                    'uri':this.props.location.pathname.split('/')[1]
+                }
             });
         } else {
             Alert.info('This product is already in your cart!',

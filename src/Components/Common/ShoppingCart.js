@@ -24,7 +24,7 @@ export default class ShoppingCart extends Component {
                     </tbody>
                 </table>
                 <div className="wrap">
-                    <div className="button clear fleft">Clear Cart</div>
+                    <div className="button clear fleft" onClick={this.props.clearCart}>Clear Cart</div>
                     <div className="button wish fright">Update Cart</div>
                 </div>
                 <div className="totals">
@@ -48,9 +48,7 @@ export default class ShoppingCart extends Component {
                             </tr>
                         </tbody>
                     </table>
-                    <div className="button add fright">
-                        Check out
-                    </div>
+                    <div className="button add fright">Check out</div>
                 </div>
             </div>
         </div>

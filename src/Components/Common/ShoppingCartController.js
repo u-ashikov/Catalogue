@@ -22,7 +22,15 @@ export default class ShoppingCartController extends Component {
         return (
             <ShoppingCart
                 products={this.state.productsID}
+                clearCart={this.clearCart.bind(this)}
             />
         )
+    }
+
+    clearCart(event) {
+        ItemsManager.items=[];
+        this.setState({
+            'productsID':[]
+        });
     }
 }

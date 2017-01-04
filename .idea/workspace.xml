@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b1f7de93-b356-4003-845d-310b8d97604e" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/styles/shopping-cart.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Components/Common/ShoppingCart.js" afterPath="$PROJECT_DIR$/src/Components/Common/ShoppingCart.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Components/Common/ShoppingCartController.js" afterPath="$PROJECT_DIR$/src/Components/Common/ShoppingCartController.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -32,11 +31,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ShoppingCart.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ShoppingCart.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Components/Common/ShoppingCart.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="182">
-              <caret line="22" column="44" lean-forward="false" selection-start-line="22" selection-start-column="44" selection-end-line="22" selection-end-column="44" />
+            <state relative-caret-position="208">
+              <caret line="26" column="85" lean-forward="false" selection-start-line="26" selection-start-column="85" selection-end-line="26" selection-end-column="85" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
               </folding>
@@ -54,11 +53,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ShoppingCartController.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ShoppingCartController.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Components/Common/ShoppingCartController.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="275">
-              <caret line="23" column="48" lean-forward="true" selection-start-line="23" selection-start-column="48" selection-end-line="23" selection-end-column="48" />
+              <caret line="29" column="22" lean-forward="true" selection-start-line="29" selection-start-column="22" selection-end-line="29" selection-end-column="22" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
               </folding>
@@ -168,11 +167,11 @@
         <option value="$PROJECT_DIR$/src/Components/Common/NavigationBar.js" />
         <option value="$PROJECT_DIR$/src/index.js" />
         <option value="$PROJECT_DIR$/src/utilities/ItemsManager.js" />
-        <option value="$PROJECT_DIR$/src/Components/Common/ShoppingCartController.js" />
         <option value="$PROJECT_DIR$/src/Components/Products/SingleProduct/ProductDetailsController.js" />
         <option value="$PROJECT_DIR$/src/Components/User/Logout/LogoutController.js" />
         <option value="$PROJECT_DIR$/src/styles/shopping-cart.css" />
         <option value="$PROJECT_DIR$/src/Components/Common/ShoppingCart.js" />
+        <option value="$PROJECT_DIR$/src/Components/Common/ShoppingCartController.js" />
       </list>
     </option>
   </component>
@@ -466,12 +465,12 @@
       <workItem from="1482398491387" duration="26911000" />
       <workItem from="1482920940830" duration="33323000" />
       <workItem from="1483441540051" duration="17792000" />
-      <workItem from="1483523153923" duration="13181000" />
+      <workItem from="1483523153923" duration="13551000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="117717000" />
+    <option name="totallyTimeSpent" value="118087000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1456" height="876" extended-state="6" />
@@ -837,20 +836,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Components/Common/ShoppingCartController.js">
+    <entry file="file://$PROJECT_DIR$/src/Components/Common/ShoppingCart.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="23" column="48" lean-forward="true" selection-start-line="23" selection-start-column="48" selection-end-line="23" selection-end-column="48" />
+        <state relative-caret-position="208">
+          <caret line="26" column="85" lean-forward="false" selection-start-line="26" selection-start-column="85" selection-end-line="26" selection-end-column="85" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Components/Common/ShoppingCart.js">
+    <entry file="file://$PROJECT_DIR$/src/Components/Common/ShoppingCartController.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="182">
-          <caret line="22" column="44" lean-forward="false" selection-start-line="22" selection-start-column="44" selection-end-line="22" selection-end-column="44" />
+        <state relative-caret-position="275">
+          <caret line="29" column="22" lean-forward="true" selection-start-line="29" selection-start-column="22" selection-end-line="29" selection-end-column="22" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
           </folding>

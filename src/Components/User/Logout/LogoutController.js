@@ -3,12 +3,14 @@ import UserModel from '../../../Models/UserModel';
 import SessionManager from '../../../utilities/SessionManager';
 import {browserHistory} from 'react-router';
 import Alert from 'react-s-alert';
+import ItemsManager from '../../../utilities/ItemsManager';
 
 export default class LogoutController extends Component {
 
     componentDidMount() {
         UserModel.logoutUser();
         SessionManager.clearSession();
+        ItemsManager.items=[];
         Alert.success('Successfully logged out!', {
             position: 'top-right',
             effect: 'stackslide',

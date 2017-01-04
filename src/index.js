@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import App from './App';
 import Home from './Components/Home/HomeView';
 import Navigation from './Components/Common/NavigationBar';
+import ShoppingCart from './Components/Common/ShoppingCartController';
 import Register from './Components/User/Register/RegisterController';
 import Login from './Components/User/Login/LoginController';
 import Logout from './Components/User/Logout/LogoutController';
@@ -28,6 +29,7 @@ ReactDOM.render(
            <Route name="Register" path='/register' component={Register}/>
            <Route name="Login" path='/login' component={Login}/>
            <Route name="Logout" path='/logout' component={Logout}/>
+           <Route name="ShoppingCart" path='/shopping-cart' component={ShoppingCart}/>
            <Route name="Necklaces" path="/necklaces" component={Necklaces}/>
            <Route name="Bracelets" path='/bracelets' component={Bracelets}/>
            <Route name="Rings" path="/rings">

@@ -31,7 +31,7 @@ export default class NavigationBar extends Component {
                                 <li><Link to="/contact">Contact</Link></li>
                             </ul>
                             <ul className="nav navbar-nav navbar-right">
-                                <li><Link to="/shopping-cart"><span className="glyphicon glyphicon-shopping-cart"></span></Link></li>
+                                <li><Link to="/shopping-cart">My cart <span className="glyphicon glyphicon-shopping-cart"></span></Link></li>
                                 <li><Link to="/logout"><span className="glyphicon glyphicon-log-out"></span>Logout</Link></li>
                             </ul>
                         </div>

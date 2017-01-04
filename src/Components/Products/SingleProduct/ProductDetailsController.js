@@ -1,6 +1,11 @@
 import React, {Component} from 'react';
 import ProductDetails from '../SingleProduct/ProductDetails';
 import ProductModel from '../../../Models/ProductModel';
+import {browserHistory} from 'react-router';
+import ItemsManager from '../../../utilities/ItemsManager';
+import Alert from 'react-s-alert';
+import 'react-s-alert/dist/s-alert-css-effects/flip.css';
+
 
 export default class ProductDetailsController extends Component {
     constructor(props) {
@@ -43,6 +48,21 @@ export default class ProductDetailsController extends Component {
 
     handlePurchase(id,event) {
         event.preventDefault();
-        alert('Purchased!'+id);
+        if (!ItemsManager.items.includes(id)) {
+            ItemsManager.items.push(id);
+            browserHistory.push({
+                pathname:'/shopping-cart',
+                state:{'productID':id}
+            });
+        } else {
+            Alert.info('This product is already in your cart!',
+                {
+                    position:'top-right',
+                    effect:'flip',
+                    timeout:3000,
+                    offset:30
+                }
+            )
+        }
     }
 }

@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import  '../../styles/shopping-cart.css';
+import ItemsManager from '../../utilities/ItemsManager';
 
 export default class ShoppingCart extends Component {
     render() {
@@ -9,7 +10,7 @@ export default class ShoppingCart extends Component {
             <div className="folderTab clearfix">
                 <h3>Shopping cart</h3>
             </div>
-            {this.props.products.length===0 ?
+            {ItemsManager.items.length===0 ?
                 <div className="empty-cart">
                     Your shopping cart is empty!
                 </div>

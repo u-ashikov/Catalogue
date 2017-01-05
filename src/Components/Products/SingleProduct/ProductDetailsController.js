@@ -48,14 +48,10 @@ export default class ProductDetailsController extends Component {
 
     handlePurchase(id,event) {
         event.preventDefault();
+        ItemsManager.uri=this.props.location.pathname.split('/')[1];
         if (!ItemsManager.items.includes(id)) {
             ItemsManager.items.push(id);
-            browserHistory.push({
-                pathname:'/shopping-cart',
-                state:{
-                    'uri':this.props.location.pathname.split('/')[1]
-                }
-            });
+            browserHistory.push('/shopping-cart');
         } else {
             Alert.info('This product is already in your cart!',
                 {

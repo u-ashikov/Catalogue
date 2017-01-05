@@ -18,14 +18,13 @@ export default class ShoppingCartController extends Component {
     componentDidMount() {
         let _self=this;
         console.dir(ItemsManager);
-        if (this.props.location.state.uri) {
-            let uriName=this.props.location.state.uri;
-            let orderedProducts=ItemsManager.items;
-            _self.setState({
-                'productsID':[...orderedProducts]
-            });
-            let allOrderedProducts=[];
-            for (let productId of orderedProducts) {
+        let uriName=ItemsManager.uri;
+        let orderedProducts=ItemsManager.items;
+        _self.setState({
+            'productsID':[...orderedProducts]
+        });
+        let allOrderedProducts=[];
+        for (let productId of orderedProducts) {
                 ProductModel.getSingleProduct(uriName,productId)
                     .then(function (product) {
                         allOrderedProducts.push(product);
@@ -35,7 +34,6 @@ export default class ShoppingCartController extends Component {
                         console.dir(_self.state);
                     })
             }
-        }
     }
 
     render() {

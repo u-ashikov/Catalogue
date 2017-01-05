@@ -1,1 +1,1 @@
-export default {items:[]};
+export default {items:[],uri:''};

@@ -40,17 +40,18 @@ export default class ProductDetailsController extends Component {
                     size={this.state.productInfo.size}
                     quantity={this.state.productInfo.quantity}
                     picture={`/pictures/${this.props.location.pathname.split('/')[1]}/${this.state.productInfo.code}.jpg`}
-                    handlePurchase={this.handlePurchase.bind(this,this.props.params.productID)}
+                    handlePurchase={this.handlePurchase.bind(this,this.state.productInfo)}
                 />
             )
         }
     }
 
-    handlePurchase(id,event) {
+    handlePurchase(product,event) {
         event.preventDefault();
-        ItemsManager.uri=this.props.location.pathname.split('/')[1];
-        if (!ItemsManager.items.includes(id)) {
-            ItemsManager.items.push(id);
+        let category=this.props.location.pathname.split('/')[1];
+        if (!Object.keys(ItemsManager.items[category]).includes(product._id)) {
+            ItemsManager.items[category][product._id]=product;
+            ItemsManager.totalItems+=1;
             browserHistory.push('/shopping-cart');
         } else {
             Alert.info('This product is already in your cart!',

@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import ShoppingCart from './ShoppingCart';
-import ProductModel from '../../Models/ProductModel';
 import ItemsManager from '../../utilities/ItemsManager';
 import Alert from 'react-s-alert';
 import 'react-s-alert/dist/s-alert-css-effects/flip.css';
@@ -9,31 +8,23 @@ export default class ShoppingCartController extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            'productsID': [],
-            'products':[],
-            'allOrderedProducts':{}
+            'products':[]
         }
     }
 
     componentDidMount() {
         let _self=this;
-        console.dir(ItemsManager);
-        let uriName=ItemsManager.uri;
-        let orderedProducts=ItemsManager.items;
-        _self.setState({
-            'productsID':[...orderedProducts]
-        });
+        let allUriNames=Object.keys(ItemsManager.items);
         let allOrderedProducts=[];
-        for (let productId of orderedProducts) {
-                ProductModel.getSingleProduct(uriName,productId)
-                    .then(function (product) {
-                        allOrderedProducts.push(product);
-                        _self.setState({
-                            'products':[...allOrderedProducts]
-                        });
-                        console.dir(_self.state);
-                    })
+        for (let category of allUriNames) {
+            let allProductsId=Object.keys(ItemsManager.items[category]);
+            for (let productID of allProductsId) {
+                allOrderedProducts.push(ItemsManager.items[category][productID]);
+                _self.setState({
+                    'products':[...allOrderedProducts]
+                });
             }
+        }
     }
 
     render() {
@@ -47,10 +38,9 @@ export default class ShoppingCartController extends Component {
     }
 
     clearCart(event) {
-        if (ItemsManager.items.length>0) {
-            ItemsManager.items=[];
+        if (ItemsManager.totalItems>0) {
+            this.clearItemManager();
             this.setState({
-                'productsID':[],
                 'products':[]
             });
             Alert.success('Items removed from cart!',{
@@ -64,11 +54,21 @@ export default class ShoppingCartController extends Component {
 
     onChangeHandler(event) {
         event.preventDefault();
-        let currentChosenProducts=this.state.allOrderedProducts;
+        let currentChosenProducts=this.state.products;
         currentChosenProducts[event.target.name]=event.target.value;
         this.setState({
             'allOrderedProducts':currentChosenProducts
         });
         console.dir(this.state);
+    }
+
+    clearItemManager() {
+        ItemsManager.items= {
+            'rings': {},
+            'earrings': {},
+            'necklaces': {},
+            'bracelets': {}
+        };
+        ItemsManager.totalItems=0;
     }
 }

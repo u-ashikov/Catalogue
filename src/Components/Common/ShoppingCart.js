@@ -10,7 +10,7 @@ export default class ShoppingCart extends Component {
             <div className="folderTab clearfix">
                 <h3>Shopping cart</h3>
             </div>
-            {ItemsManager.items.length===0 ?
+            {ItemsManager.totalItems===0 ?
                 <div className="empty-cart">
                     Your shopping cart is empty!
                 </div>

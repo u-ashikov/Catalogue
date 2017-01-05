@@ -10,7 +10,13 @@ export default class LogoutController extends Component {
     componentDidMount() {
         UserModel.logoutUser();
         SessionManager.clearSession();
-        ItemsManager.items=[];
+        ItemsManager.items= {
+            'rings': {},
+            'earrings': {},
+            'necklaces': {},
+            'bracelets': {}
+        };
+        ItemsManager.totalItems=0;
         Alert.success('Successfully logged out!', {
             position: 'top-right',
             effect: 'stackslide',

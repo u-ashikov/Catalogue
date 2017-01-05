@@ -31,16 +31,15 @@ export default class ShoppingCart extends Component {
                                     {item.name} - {item.description}
                                 </td>
                                 <td className="numCell">
-                                    ${item.price}
+                                    {item.price}
                                 </td>
                                 <td className="center">
                                     <input
-                                        type="number"
+                                        name={item.name}
                                         min="1"
                                         max={item.quantity}
-                                        name="quantityValue"
+                                        type="number"
                                         className="qty"
-                                        value={this.props.quantityValue}
                                         onChange={this.props.onChangeHandler}
                                     />
                                 </td>
@@ -50,9 +49,10 @@ export default class ShoppingCart extends Component {
                                     </div>
                                 </td>
                                 <td className="numCell">
-                                    ${item.price*this.props.quantityValue}
+                                    ${Number(item.price)}
                                 </td>
-                            </tr>)}
+                            </tr>
+                        )}
                         </tbody>
                     </table>
                     <div className="wrap">

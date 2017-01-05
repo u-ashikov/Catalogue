@@ -11,7 +11,7 @@ export default class ShoppingCartController extends Component {
         this.state = {
             'productsID': [],
             'products':[],
-            'quantityValue':'1'
+            'orderedProducts':{}
         }
     }
 
@@ -26,8 +26,8 @@ export default class ShoppingCartController extends Component {
         for (let productId of orderedProducts) {
             ProductModel.getSingleProduct(uriName,productId)
                 .then(function (product) {
-                    console.dir(product);
                     allOrderedProducts.push(product);
+                    //console.dir(allOrderedProducts);
                     _self.setState({
                         'products':[...allOrderedProducts]
                     })
@@ -40,8 +40,7 @@ export default class ShoppingCartController extends Component {
             <ShoppingCart
                 products={this.state.products}
                 clearCart={this.clearCart.bind(this)}
-                quantityValue={this.state.quantityValue}
-                onChangeHandler={this.handleChange.bind(this)}
+                onChangeHandler={this.onChangeHandler.bind(this)}
             />
         )
     }
@@ -62,10 +61,14 @@ export default class ShoppingCartController extends Component {
         }
     }
 
-    handleChange(event) {
+    onChangeHandler(event) {
         event.preventDefault();
         let newState={};
-        newState[event.target.name]=event.target.value;
-        this.setState(newState);
+        let currentChosenProducts=this.state.orderedProducts;
+        currentChosenProducts[event.target.name]=event.target.value;
+        this.setState({
+            'orderedProducts':currentChosenProducts
+        });
+        console.dir(this.state);
     }
 }

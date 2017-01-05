@@ -11,27 +11,30 @@ export default class ShoppingCartController extends Component {
         this.state = {
             'productsID': [],
             'products':[],
-            'orderedProducts':{}
+            'allOrderedProducts':{}
         }
     }
 
     componentDidMount() {
         let _self=this;
-        let uriName=this.props.location.state.uri;
-        let orderedProducts=ItemsManager.items;
-        _self.setState({
-            'productsID':[...orderedProducts]
-        });
-        let allOrderedProducts=[];
-        for (let productId of orderedProducts) {
-            ProductModel.getSingleProduct(uriName,productId)
-                .then(function (product) {
-                    allOrderedProducts.push(product);
-                    //console.dir(allOrderedProducts);
-                    _self.setState({
-                        'products':[...allOrderedProducts]
+        console.dir(ItemsManager);
+        if (this.props.location.state.uri) {
+            let uriName=this.props.location.state.uri;
+            let orderedProducts=ItemsManager.items;
+            _self.setState({
+                'productsID':[...orderedProducts]
+            });
+            let allOrderedProducts=[];
+            for (let productId of orderedProducts) {
+                ProductModel.getSingleProduct(uriName,productId)
+                    .then(function (product) {
+                        allOrderedProducts.push(product);
+                        _self.setState({
+                            'products':[...allOrderedProducts]
+                        });
+                        console.dir(_self.state);
                     })
-                })
+            }
         }
     }
 
@@ -63,11 +66,10 @@ export default class ShoppingCartController extends Component {
 
     onChangeHandler(event) {
         event.preventDefault();
-        let newState={};
-        let currentChosenProducts=this.state.orderedProducts;
+        let currentChosenProducts=this.state.allOrderedProducts;
         currentChosenProducts[event.target.name]=event.target.value;
         this.setState({
-            'orderedProducts':currentChosenProducts
+            'allOrderedProducts':currentChosenProducts
         });
         console.dir(this.state);
     }

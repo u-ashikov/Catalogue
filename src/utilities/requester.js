@@ -49,4 +49,15 @@ export default class Requester {
             error:errorHandler.handleAjaxError
         })
     }
+
+    putRequest(module,uri,data,id) {
+        return $.ajax({
+            method:"PUT",
+            url:baseURL+module+'/'+appKey+'/'+uri+"/"+id,
+            headers:this.authorization,
+            data:JSON.stringify(data),
+            contentType:"application/json",
+            error:errorHandler.handleAjaxError
+        })
+    }
 }

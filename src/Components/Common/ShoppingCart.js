@@ -3,6 +3,7 @@ import  '../../styles/shopping-cart.css';
 
 export default class ShoppingCart extends Component {
     render() {
+        let _self=this;
         return (
         <div>
             <div className="folderTab clearfix">
@@ -35,7 +36,7 @@ export default class ShoppingCart extends Component {
                                 </td>
                                 <td className="center">
                                     <input
-                                        name={item.name}
+                                        name={item._id}
                                         min="1"
                                         max={item.quantity}
                                         type="number"
@@ -49,7 +50,7 @@ export default class ShoppingCart extends Component {
                                     </div>
                                 </td>
                                 <td className="numCell">
-                                    ${Number(item.price)}
+                                    ${(Number(item.price)).toFixed(2)}
                                 </td>
                             </tr>
                         )}
@@ -84,7 +85,6 @@ export default class ShoppingCart extends Component {
                     </div>
                 </div>
             }
-
         </div>
         )
     }

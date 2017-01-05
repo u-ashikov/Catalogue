@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b1f7de93-b356-4003-845d-310b8d97604e" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Components/Common/ShoppingCart.js" afterPath="$PROJECT_DIR$/src/Components/Common/ShoppingCart.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Components/Common/ShoppingCartController.js" afterPath="$PROJECT_DIR$/src/Components/Common/ShoppingCartController.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Components/Products/SingleProduct/ProductDetailsController.js" afterPath="$PROJECT_DIR$/src/Components/Products/SingleProduct/ProductDetailsController.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/utilities/ItemsManager.js" afterPath="$PROJECT_DIR$/src/utilities/ItemsManager.js" />
-    </list>
+    <list default="true" id="b1f7de93-b356-4003-845d-310b8d97604e" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -48,7 +43,7 @@
       <file leaf-file-name="ProductDetailsController.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Components/Products/SingleProduct/ProductDetailsController.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1152">
+            <state relative-caret-position="216">
               <caret line="53" column="39" lean-forward="false" selection-start-line="53" selection-start-column="39" selection-end-line="53" selection-end-column="39" />
               <folding />
             </state>
@@ -58,8 +53,8 @@
       <file leaf-file-name="ShoppingCartController.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Components/Common/ShoppingCartController.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="24">
-              <caret line="10" column="25" lean-forward="false" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="25" />
+            <state relative-caret-position="351">
+              <caret line="61" column="32" lean-forward="true" selection-start-line="61" selection-start-column="32" selection-end-line="61" selection-end-column="32" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
               </folding>
@@ -434,12 +429,12 @@
       <workItem from="1482920940830" duration="33323000" />
       <workItem from="1483441540051" duration="17792000" />
       <workItem from="1483523153923" duration="23901000" />
-      <workItem from="1483619180118" duration="21994000" />
+      <workItem from="1483619180118" duration="22791000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="150431000" />
+    <option name="totallyTimeSpent" value="151228000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1456" height="876" extended-state="6" />
@@ -779,14 +774,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Components/Products/SingleProduct/ProductDetailsController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1152">
-          <caret line="53" column="39" lean-forward="false" selection-start-line="53" selection-start-column="39" selection-end-line="53" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Components/Common/ShoppingCart.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="132">
@@ -797,10 +784,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Components/Products/SingleProduct/ProductDetailsController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="53" column="39" lean-forward="false" selection-start-line="53" selection-start-column="39" selection-end-line="53" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Components/Common/ShoppingCartController.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="24">
-          <caret line="10" column="25" lean-forward="false" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="25" />
+        <state relative-caret-position="351">
+          <caret line="61" column="32" lean-forward="true" selection-start-line="61" selection-start-column="32" selection-end-line="61" selection-end-column="32" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
           </folding>

@@ -34,6 +34,7 @@ export default class ShoppingCartController extends Component {
         return (
             <ShoppingCart
                 products={ItemsManager.items}
+                shippingTax='5'
                 clearCart={this.clearCart.bind(this)}
                 onChangeHandler={this.onChangeHandler.bind(this)}
                 calculateTotal={this.calculateTotalSum()}
@@ -55,7 +56,7 @@ export default class ShoppingCartController extends Component {
                 effect:'flip',
                 timeout:3000,
                 offset:30
-            })
+            });
         }
     }
 

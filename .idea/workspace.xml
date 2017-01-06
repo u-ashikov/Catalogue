@@ -25,7 +25,7 @@
         <entry file="file://$PROJECT_DIR$/src/Components/Common/ShoppingCart.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="321">
-              <caret line="76" column="63" lean-forward="false" selection-start-line="76" selection-start-column="63" selection-end-line="76" selection-end-column="63" />
+              <caret line="76" column="39" lean-forward="true" selection-start-line="76" selection-start-column="39" selection-end-line="76" selection-end-column="39" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
               </folding>
@@ -47,7 +47,7 @@
         <entry file="file://$PROJECT_DIR$/src/Components/Common/ShoppingCartController.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="384">
-              <caret line="89" column="28" lean-forward="false" selection-start-line="89" selection-start-column="28" selection-end-line="89" selection-end-column="28" />
+              <caret line="58" column="15" lean-forward="false" selection-start-line="58" selection-start-column="15" selection-end-line="58" selection-end-column="15" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
               </folding>
@@ -477,12 +477,12 @@
       <workItem from="1482920940830" duration="33323000" />
       <workItem from="1483441540051" duration="17792000" />
       <workItem from="1483523153923" duration="23901000" />
-      <workItem from="1483619180118" duration="37604000" />
+      <workItem from="1483619180118" duration="38349000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="166041000" />
+    <option name="totallyTimeSpent" value="166786000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1456" height="876" extended-state="6" />
@@ -852,7 +852,7 @@
     <entry file="file://$PROJECT_DIR$/src/Components/Common/ShoppingCart.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="321">
-          <caret line="76" column="63" lean-forward="false" selection-start-line="76" selection-start-column="63" selection-end-line="76" selection-end-column="63" />
+          <caret line="76" column="39" lean-forward="true" selection-start-line="76" selection-start-column="39" selection-end-line="76" selection-end-column="39" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
           </folding>
@@ -862,7 +862,7 @@
     <entry file="file://$PROJECT_DIR$/src/Components/Common/ShoppingCartController.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="384">
-          <caret line="89" column="28" lean-forward="false" selection-start-line="89" selection-start-column="28" selection-end-line="89" selection-end-column="28" />
+          <caret line="58" column="15" lean-forward="false" selection-start-line="58" selection-start-column="15" selection-end-line="58" selection-end-column="15" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
           </folding>

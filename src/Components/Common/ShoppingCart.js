@@ -66,15 +66,15 @@ export default class ShoppingCart extends Component {
                             <tbody>
                             <tr>
                                 <td>Subtotal</td>
-                                <td>$0.00</td>
+                                <td>${this.props.calculateTotal}</td>
                             </tr>
                             <tr>
                                 <td>Shipping</td>
-                                <td>$0.00</td>
+                                <td>${Number(this.props.shippingTax).toFixed(2)}</td>
                             </tr>
                             <tr>
                                 <td>Grand total</td>
-                                <td>${this.props.calculateTotal}</td>
+                                <td>${(Number(this.props.calculateTotal)+Number(this.props.shippingTax)).toFixed(2)}</td>
                             </tr>
                             </tbody>
                         </table>

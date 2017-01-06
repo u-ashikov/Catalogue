@@ -36,6 +36,7 @@ export default class ShoppingCartController extends Component {
                 products={ItemsManager.items}
                 clearCart={this.clearCart.bind(this)}
                 onChangeHandler={this.onChangeHandler.bind(this)}
+                calculateTotal={this.calculateTotalSum()}
             />
         )
     }
@@ -44,7 +45,10 @@ export default class ShoppingCartController extends Component {
         if (ItemsManager.totalItems>0) {
             this.clearItemManager();
             this.setState({
-                'products':[]
+                'rings':{},
+                'earrings':{},
+                'necklaces':{},
+                'bracelets':{}
             });
             Alert.success('Items removed from cart!',{
                 position:'top-right',
@@ -76,5 +80,13 @@ export default class ShoppingCartController extends Component {
             'bracelets': {}
         };
         ItemsManager.totalItems=0;
+    }
+
+    calculateTotalSum() {
+        let sum=0;
+        Object.keys(this.state).map(category=>Object.keys(ItemsManager.items[category]).map(itemID=>sum+=(Number(ItemsManager.items[category][itemID].orderCount)*Number(ItemsManager.items[category][itemID].product.price)
+            )
+        ));
+        return sum.toFixed(2);
     }
 }

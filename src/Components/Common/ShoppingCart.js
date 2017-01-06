@@ -19,6 +19,7 @@ export default class ShoppingCart extends Component {
                     <table className="cart">
                         <thead>
                         <tr>
+                            <th></th>
                             <th>Product</th>
                             <th className="numCell">Price</th>
                             <th>Quantity</th>
@@ -73,7 +74,7 @@ export default class ShoppingCart extends Component {
                             </tr>
                             <tr>
                                 <td>Grand total</td>
-                                <td>$0.00</td>
+                                <td>${this.props.calculateTotal}</td>
                             </tr>
                             </tbody>
                         </table>

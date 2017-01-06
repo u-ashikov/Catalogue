@@ -8,29 +8,32 @@ export default class ShoppingCartController extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            'products':[]
+                'rings':{},
+                'earrings':{},
+                'necklaces':{},
+                'bracelets':{}
         }
     }
 
     componentDidMount() {
         let _self=this;
-        let allUriNames=Object.keys(ItemsManager.items);
-        let allOrderedProducts=[];
-        for (let category of allUriNames) {
+        let categories=Object.keys(ItemsManager.items);
+        for (let category of categories) {
+            let orderedByCategory={};
             let allProductsId=Object.keys(ItemsManager.items[category]);
             for (let productID of allProductsId) {
-                allOrderedProducts.push(ItemsManager.items[category][productID]);
-                _self.setState({
-                    'products':[...allOrderedProducts]
-                });
+                orderedByCategory[productID]=ItemsManager.items[category][productID].orderCount;
             }
+            let newState={};
+            newState[category]=orderedByCategory;
+            _self.setState(newState);
         }
     }
 
     render() {
         return (
             <ShoppingCart
-                products={this.state.products}
+                products={ItemsManager.items}
                 clearCart={this.clearCart.bind(this)}
                 onChangeHandler={this.onChangeHandler.bind(this)}
             />
@@ -54,12 +57,15 @@ export default class ShoppingCartController extends Component {
 
     onChangeHandler(event) {
         event.preventDefault();
-        let currentChosenProducts=this.state.products;
-        currentChosenProducts[event.target.name]=event.target.value;
-        this.setState({
-            'allOrderedProducts':currentChosenProducts
-        });
-        console.dir(this.state);
+        let _self=this;
+        let category=event.target.name.split('-')[1];
+        let productID=event.target.name.split('-')[0];
+        let allProductsByCategory=_self.state[category];
+        allProductsByCategory[productID]=Number(event.target.value);
+        let newState={};
+        newState[category]=allProductsByCategory;
+        _self.setState(newState);
+        ItemsManager.items[category][productID].orderCount=event.target.value;
     }
 
     clearItemManager() {

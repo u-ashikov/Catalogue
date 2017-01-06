@@ -50,7 +50,7 @@ export default class ProductDetailsController extends Component {
         event.preventDefault();
         let category=this.props.location.pathname.split('/')[1];
         if (!Object.keys(ItemsManager.items[category]).includes(product._id)) {
-            ItemsManager.items[category][product._id]=product;
+            ItemsManager.items[category][product._id]={'product':product,'orderCount':1};
             ItemsManager.totalItems+=1;
             browserHistory.push('/shopping-cart');
         } else {

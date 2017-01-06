@@ -27,33 +27,35 @@ export default class ShoppingCart extends Component {
                         </tr>
                         </thead>
                         <tbody>
-                        {this.props.products.map(item=>
-                            <tr key={item._id}>
-                                <td>
-                                    {item.name} - {item.description}
-                                </td>
-                                <td className="numCell">
-                                    {item.price}
-                                </td>
-                                <td className="center">
-                                    <input
-                                        name={item._id}
-                                        min="1"
-                                        max={item.quantity}
-                                        type="number"
-                                        className="qty"
-                                        onChange={this.props.onChangeHandler}
-                                    />
-                                </td>
-                                <td>
-                                    <div className="button remove">
-                                        X
-                                    </div>
-                                </td>
-                                <td className="numCell">
-                                    ${(Number(item.price)).toFixed(2)}
-                                </td>
-                            </tr>
+                        {Object.keys(this.props.products).map(category=>Object.keys(this.props.products[category]).map(itemID=>
+                                <tr key={itemID}>
+                                    <td>
+                                        {this.props.products[category][itemID].product.name} - {this.props.products[category][itemID].product.description}
+                                    </td>
+                                    <td className="numCell">
+                                        {Number(this.props.products[category][itemID].product.price).toFixed(2)}
+                                    </td>
+                                    <td className="center">
+                                        <input
+                                            name={itemID.concat('-').concat(category)}
+                                            min="1"
+                                            max={this.props.products[category][itemID].product.quantity}
+                                            type="number"
+                                            className="qty"
+                                            value={Number(this.props.products[category][itemID].orderCount)}
+                                            onChange={this.props.onChangeHandler}
+                                        />
+                                    </td>
+                                    <td>
+                                        <div className="button remove">
+                                            X
+                                        </div>
+                                    </td>
+                                    <td className="numCell">
+                                        ${Number(this.props.products[category][itemID].product.price)*Number(this.props.products[category][itemID].orderCount)}
+                                    </td>
+                                </tr>
+                        )
                         )}
                         </tbody>
                     </table>

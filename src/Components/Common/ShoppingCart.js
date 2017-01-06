@@ -19,16 +19,17 @@ export default class ShoppingCart extends Component {
                     <table className="cart">
                         <thead>
                         <tr>
-                            <th></th>
                             <th>Product</th>
                             <th className="numCell">Price</th>
                             <th>Quantity</th>
+                            <th></th>
                             <th className="numCell">Total</th>
                         </tr>
                         </thead>
                         <tbody>
                         {Object.keys(this.props.products).map(category=>Object.keys(this.props.products[category]).map(itemID=>
                                 <tr key={itemID}>
+                                    <td><img src={`/pictures/${category[0].toUpperCase()+category.slice(1)}/${this.props.products[category][itemID].product.code}.jpg`} width='92' height='92' alt={this.props.products[category][itemID].product.name}/></td>
                                     <td>
                                         {this.props.products[category][itemID].product.name} - {this.props.products[category][itemID].product.description}
                                     </td>
@@ -46,11 +47,7 @@ export default class ShoppingCart extends Component {
                                             onChange={this.props.onChangeHandler}
                                         />
                                     </td>
-                                    <td>
-                                        <div className="button remove">
-                                            X
-                                        </div>
-                                    </td>
+                                    <td><div className="button remove">X</div></td>
                                     <td className="numCell">
                                         ${Number(this.props.products[category][itemID].product.price)*Number(this.props.products[category][itemID].orderCount)}
                                     </td>
@@ -68,10 +65,6 @@ export default class ShoppingCart extends Component {
                             <tbody>
                             <tr>
                                 <td>Subtotal</td>
-                                <td>$0.00</td>
-                            </tr>
-                            <tr>
-                                <td>Tax</td>
                                 <td>$0.00</td>
                             </tr>
                             <tr>

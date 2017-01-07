@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import ShoppingCart from './ShoppingCart';
 import ItemsManager from '../../utilities/ItemsManager';
+import {browserHistory} from 'react-router';
 import Alert from 'react-s-alert';
 import 'react-s-alert/dist/s-alert-css-effects/flip.css';
 
@@ -37,6 +38,7 @@ export default class ShoppingCartController extends Component {
                 shippingTax='5'
                 clearCart={this.clearCart.bind(this)}
                 onChangeHandler={this.onChangeHandler.bind(this)}
+                onRemoveHandler={this.removeItemFromCart.bind(this)}
                 calculateTotal={this.calculateTotalSum()}
             />
         )
@@ -58,6 +60,15 @@ export default class ShoppingCartController extends Component {
                 offset:30
             });
         }
+    }
+
+    removeItemFromCart(event) {
+        let productID=event.target.id.split('-')[0];
+        let category=event.target.id.split('-')[1];
+        delete ItemsManager.items[category][productID];
+        delete this.state[category][productID];
+        ItemsManager.totalItems--;
+        browserHistory.push('shopping-cart');
     }
 
     onChangeHandler(event) {

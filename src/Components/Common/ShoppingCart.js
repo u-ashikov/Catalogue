@@ -48,7 +48,14 @@ export default class ShoppingCart extends Component {
                                             onChange={this.props.onChangeHandler}
                                         />
                                     </td>
-                                    <td><div className="button remove">X</div></td>
+                                    <td>
+                                        <div className="button remove"
+                                                id={itemID.concat('-').concat(category)}
+                                                onClick={this.props.onRemoveHandler}
+                                        >
+                                            X
+                                        </div>
+                                    </td>
                                     <td className="numCell">
                                         ${Number(this.props.products[category][itemID].product.price)*Number(this.props.products[category][itemID].orderCount)}
                                     </td>

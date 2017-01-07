@@ -85,7 +85,12 @@ export default class ShoppingCart extends Component {
                             </tr>
                             </tbody>
                         </table>
-                        <div className="button add fright">Check out</div>
+                        <div
+                            className="button add fright"
+                            onClick={this.props.onConfirmHandler}
+                        >
+                            Check out
+                        </div>
                     </div>
                 </div>
             }

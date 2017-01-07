@@ -37,6 +37,7 @@ export default class ShoppingCartController extends Component {
                 products={ItemsManager.items}
                 shippingTax='5'
                 clearCart={this.clearCart.bind(this)}
+                onConfirmHandler={this.orderInfo.bind(this)}
                 onChangeHandler={this.onChangeHandler.bind(this)}
                 onRemoveHandler={this.removeItemFromCart.bind(this)}
                 calculateTotal={this.calculateTotalSum()}
@@ -82,6 +83,10 @@ export default class ShoppingCartController extends Component {
         newState[category]=allProductsByCategory;
         _self.setState(newState);
         ItemsManager.items[category][productID].orderCount=event.target.value;
+    }
+
+    orderInfo(event) {
+        browserHistory.push('/confirm-order');
     }
 
     clearItemManager() {

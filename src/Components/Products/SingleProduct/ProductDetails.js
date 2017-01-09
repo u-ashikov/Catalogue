@@ -8,6 +8,7 @@ export default class ProductDetails extends Component {
                 <article className="item-pane">
                     <div className="item-preview">
                         <img className="product" src={this.props.picture} alt="product" width='190' height='280'/>
+                        <span className="sale">SOLD OUT!</span>
                     </div>
                     <div className="item-details">
                         <h1>{this.props.name}</h1>
@@ -32,6 +33,7 @@ export default class ProductDetails extends Component {
                             <span className="item-price">{this.props.price}<span className="item-price__units"> лв.</span></span>
                             <button
                                 className="button buy-button"
+                                disabled={this.props.disableButton}
                                 onClick={this.props.handlePurchase}
                             >Purchase</button>
                         </div>

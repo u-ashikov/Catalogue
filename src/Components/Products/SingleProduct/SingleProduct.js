@@ -10,7 +10,11 @@ export default class SingleProduct extends Component {
                     <span className="price">
                         {this.props.price}
                     </span>
-                    <a className="button" onClick={this.props.onClickHandler}>More Info</a>
+                    <a className="button"
+                       onClick={this.props.onClickHandler}
+                    >
+                        More Info
+                    </a>
             </figure>
         )
     }

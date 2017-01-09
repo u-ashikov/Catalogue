@@ -86,7 +86,6 @@ export default class OrderInfoController extends Component {
             'bracelets': {}
         };
         ItemsManager.totalItems=0;
-        console.dir(ItemsManager);
         browserHistory.push('/home');
     }
 }

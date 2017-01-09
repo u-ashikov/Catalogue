@@ -11,7 +11,8 @@ export default class ProductDetailsController extends Component {
     constructor(props) {
         super(props);
         this.state={
-            'productInfo':''
+            'productInfo':'',
+            disabled:false
         }
     }
 
@@ -20,6 +21,15 @@ export default class ProductDetailsController extends Component {
         let uriName=this.props.location.pathname.split('/')[1];
         ProductModel.getSingleProduct(uriName,this.props.params.productID)
             .then(function (product) {
+                if (Number(product.quantity)===0) {
+                    _self.setState({
+                        disabled:true
+                    })
+                } else {
+                    _self.setState({
+                        disabled:false
+                    })
+                }
                 _self.setState({'productInfo':product});
             })
     }
@@ -40,6 +50,7 @@ export default class ProductDetailsController extends Component {
                     size={this.state.productInfo.size}
                     quantity={this.state.productInfo.quantity}
                     picture={`/pictures/${this.props.location.pathname.split('/')[1]}/${this.state.productInfo.code}.jpg`}
+                    disableButton={this.state.disabled}
                     handlePurchase={this.handlePurchase.bind(this,this.state.productInfo)}
                 />
             )

@@ -72,6 +72,7 @@ div#columns figure img {
     border-bottom: 1px solid #ccc;
     padding-bottom: 15px;
     margin-bottom: 5px;
+    padding-right: 15px;
 }
 
 div#columns figure figcaption {

@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
 import OrderInfo from '../Order/OrderInfo';
+import ItemsManager from '../../utilities/ItemsManager';
+import OrderModel from '../../Models/OrderModel';
 
 export default class OrderInfoController extends Component {
     constructor(props) {

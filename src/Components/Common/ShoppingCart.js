@@ -66,7 +66,6 @@ export default class ShoppingCart extends Component {
                     </table>
                     <div className="wrap">
                         <div className="button clear fleft" onClick={this.props.clearCart}>Clear Cart</div>
-                        <div className="button wish fright">Update Cart</div>
                     </div>
                     <div className="totals">
                         <table className="totaler">

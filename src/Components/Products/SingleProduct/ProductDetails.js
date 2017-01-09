@@ -8,7 +8,11 @@ export default class ProductDetails extends Component {
                 <article className="item-pane">
                     <div className="item-preview">
                         <img className="product" src={this.props.picture} alt="product" width='190' height='280'/>
-                        <span className="sale">SOLD OUT!</span>
+                        {Number(this.props.quantity)===0 ?
+                            <span className="sale">SOLD OUT!</span>
+                            :
+                            null
+                        }
                     </div>
                     <div className="item-details">
                         <h1>{this.props.name}</h1>

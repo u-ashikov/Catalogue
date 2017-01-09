@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import OrderInfo from '../Order/OrderInfo';
 import ItemsManager from '../../utilities/ItemsManager';
 import OrderModel from '../../Models/OrderModel';
+import ProductModel from '../../Models/ProductModel';
 
 export default class OrderInfoController extends Component {
     constructor(props) {
@@ -34,6 +35,46 @@ export default class OrderInfoController extends Component {
 
     submitOrder(event) {
         event.preventDefault();
+        console.dir(ItemsManager.items);
         console.dir(this.state);
+        for (let category of Object.keys(ItemsManager.items)) {
+            let itemsByCategory=Object.keys(ItemsManager.items[category]);
+            for (let itemID of itemsByCategory) {
+                let productInfo=ItemsManager.items[category][itemID].product;
+                let orderCount=ItemsManager.items[category][itemID].orderCount;
+                let data={
+                    category:category,
+                    productId:productInfo._id,
+                    name:productInfo.name,
+                    code:productInfo.code,
+                    description:productInfo.description,
+                    price:productInfo.price,
+                    orderCount:orderCount,
+                    totalPrice:(Number(productInfo.price)*Number(orderCount)).toFixed(2),
+                    customerName:this.state.fullName,
+                    customerId:sessionStorage.getItem('userId'),
+                    customerEmail:this.state.email,
+                    customerPhone:this.state.phone,
+                    deliveryAddress:this.state.address
+                };
+                let updatedProduct={
+                    name:productInfo.name,
+                    price:productInfo.price,
+                    description:productInfo.description,
+                    code:productInfo.code,
+                    size:productInfo.size,
+                    quantity:Number(productInfo.quantity)-Number(orderCount),
+                    orderCount:Number(orderCount)
+                };
+                OrderModel.postOrder(data)
+                    .then(function (response) {
+                        console.dir(response);
+                    });
+                ProductModel.updateSingleProducts(category,productInfo._id,updatedProduct)
+                    .then(function (response) {
+                        console.dir(response);
+                    })
+            }
+        }
     }
 }

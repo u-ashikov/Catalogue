@@ -86,3 +86,7 @@ form textarea {
     text-transform: uppercase;
     font-weight: bold;
 }
+
+.require-info {
+    font-weight:bold;
+}

@@ -69,19 +69,24 @@ export default class OrderInfoController extends Component {
                     quantity:Number(productInfo.quantity)-Number(orderCount),
                     orderCount:Number(orderCount)
                 };
-                OrderModel.postOrder(data)
-                    .then(function (response) {
-                        Alert.success('Your order has been sent successfully! We will contact you for confirmation!',{
-                            position:'top',
-                            effect:'flip',
-                            timeout:4000
-                        });
-                        browserHistory.push('/home');
-                    });
-                ProductModel.updateSingleProducts(category,productInfo._id,updatedProduct)
-                    .then(function (response) {
-                    });
+                OrderModel.postOrder(data);
+                ProductModel.updateSingleProducts(category,productInfo._id,updatedProduct);
             }
         }
+        Alert.success('Your order has been sent successfully! We will contact you for confirmation!',{
+            position:'top',
+            effect:'flip',
+            timeout:10000,
+            offset:50
+        });
+        ItemsManager.items= {
+            'rings': {},
+            'earrings': {},
+            'necklaces': {},
+            'bracelets': {}
+        };
+        ItemsManager.totalItems=0;
+        console.dir(ItemsManager);
+        browserHistory.push('/home');
     }
 }

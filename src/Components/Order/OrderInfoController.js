@@ -4,6 +4,11 @@ import ItemsManager from '../../utilities/ItemsManager';
 import OrderModel from '../../Models/OrderModel';
 import ProductModel from '../../Models/ProductModel';
 
+import Alert from 'react-s-alert';
+import 'react-s-alert/dist/s-alert-css-effects/flip.css';
+
+import {browserHistory} from 'react-router';
+
 export default class OrderInfoController extends Component {
     constructor(props) {
         super(props);
@@ -35,8 +40,6 @@ export default class OrderInfoController extends Component {
 
     submitOrder(event) {
         event.preventDefault();
-        console.dir(ItemsManager.items);
-        console.dir(this.state);
         for (let category of Object.keys(ItemsManager.items)) {
             let itemsByCategory=Object.keys(ItemsManager.items[category]);
             for (let itemID of itemsByCategory) {
@@ -68,12 +71,16 @@ export default class OrderInfoController extends Component {
                 };
                 OrderModel.postOrder(data)
                     .then(function (response) {
-                        console.dir(response);
+                        Alert.success('Your order has been sent successfully! We will contact you for confirmation!',{
+                            position:'top',
+                            effect:'flip',
+                            timeout:4000
+                        });
+                        browserHistory.push('/home');
                     });
                 ProductModel.updateSingleProducts(category,productInfo._id,updatedProduct)
                     .then(function (response) {
-                        console.dir(response);
-                    })
+                    });
             }
         }
     }

@@ -24,7 +24,7 @@ export default class NecklacesController extends Component {
                             id={necklace._id}
                             picture={`/pictures/necklaces/${necklace.code}.jpg`}
                             price={Number(necklace.price).toFixed(2)}
-                            title={necklace.title}
+                            title={necklace.name}
                             onClickHandler={_self.onClickHandler.bind(this,necklace._id)}
                         />
                     )

@@ -32,7 +32,12 @@ ReactDOM.render(
            <Route name="Logout" path='/logout' component={Logout}/>
            <Route name="OrderInfo" path='/confirm-order' component={OrderInfo}/>
            <Route name="ShoppingCart" path='/shopping-cart' component={ShoppingCart}/>
-           <Route name="Necklaces" path="/necklaces" component={Necklaces}/>
+           <Route name="Necklaces" path="/necklaces">
+               <IndexRoute component={Necklaces}/>
+               <Route
+                   path=':productID' component={ProductDetails}>
+               </Route>
+           </Route>
            <Route name="Bracelets" path='/bracelets' component={Bracelets}/>
            <Route name="Rings" path="/rings">
                <IndexRoute component={Rings}/>

@@ -39,10 +39,9 @@ export default class NavigationBar extends Component {
                                     onMouseEnter={this.handleToggle.bind(this)}
                                     onMouseLeave={this.handleToggle.bind(this)}
                                 >
-                                    <a
+                                    <Link to="/"
                                         className="dropdown-toggle"
-                                        href="#"
-                                    >Page 1 <span className="caret"></span></a>
+                                    >Page 1 <span className="caret"></span></Link>
                                     <ul
                                         className="dropdown-menu"
                                         style={{display: this.state.showItems ? 'block' : 'none' }}

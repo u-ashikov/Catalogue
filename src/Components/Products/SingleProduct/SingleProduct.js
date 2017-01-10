@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import '../../Products/Rings/rings.css';
+import '../../../styles/products.css';
 
 export default class SingleProduct extends Component {
     render() {

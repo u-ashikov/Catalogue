@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import SingleProduct from '../SingleProduct/SingleProduct';
-import '../../Products/Rings/rings.css';
+import '../../../styles/products.css';
 import {browserHistory} from 'react-router';
 
 import ProductModel from '../../../Models/ProductModel';

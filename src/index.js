@@ -50,7 +50,13 @@ ReactDOM.render(
                    path=":productID" component={ProductDetails}>
                </Route>
            </Route>
-           <Route name="Earrings" path='/earrings' component={Earrings}/>
+           <Route name="Earrings" path='/earrings'>
+               <IndexRoute component={Earrings}/>
+               <Route
+                   path=':productID' component={ProductDetails}
+               >
+               </Route>
+           </Route>
            <Route name="About" path='/about' component={About}/>
            <Route name="Contact" path='/contact' component={Contact}/>
        </Route>

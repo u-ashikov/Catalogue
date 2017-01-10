@@ -34,7 +34,7 @@ export default class ProductDetails extends Component {
                             </dl>
                         </div>
                         <div className="pane__section clearfix">
-                            <span className="item-price">{this.props.price}<span className="item-price__units"> лв.</span></span>
+                            <span className="item-price">{Number(this.props.price).toFixed(2)}<span className="item-price__units"> лв.</span></span>
                             <button
                                 className="button buy-button"
                                 disabled={this.props.disableButton}

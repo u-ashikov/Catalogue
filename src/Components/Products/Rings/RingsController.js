@@ -24,7 +24,7 @@ export default class RingsController extends Component {
                         id={ring._id}
                         title={ring.name}
                         picture={`/pictures/rings/${ring.code}.jpg`}
-                        price={ring.price}
+                        price={Number(ring.price).toFixed(2)}
                         onClickHandler={_self.onClickHandler.bind(this,ring._id)}
                     />)
                 }

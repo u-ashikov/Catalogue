@@ -57,7 +57,7 @@ export default class ShoppingCart extends Component {
                                         </div>
                                     </td>
                                     <td className="numCell">
-                                        ${Number(this.props.products[category][itemID].product.price)*Number(this.props.products[category][itemID].orderCount)}
+                                        ${(Number(this.props.products[category][itemID].product.price)*Number(this.props.products[category][itemID].orderCount)).toFixed(2)}
                                     </td>
                                 </tr>
                         )

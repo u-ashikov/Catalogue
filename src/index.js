@@ -38,7 +38,12 @@ ReactDOM.render(
                    path=':productID' component={ProductDetails}>
                </Route>
            </Route>
-           <Route name="Bracelets" path='/bracelets' component={Bracelets}/>
+           <Route name="Bracelets" path='/bracelets'>
+               <IndexRoute component={Bracelets}/>
+               <Route
+                   path=':productID' component={ProductDetails}>
+               </Route>
+           </Route>
            <Route name="Rings" path="/rings">
                <IndexRoute component={Rings}/>
                <Route

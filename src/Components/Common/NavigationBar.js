@@ -35,11 +35,13 @@ export default class NavigationBar extends Component {
                                 <li><Link to="/earrings">Earrings</Link></li>
                                 <li><Link to="/about">About</Link></li>
                                 <li><Link to="/contact">Contact</Link></li>
-                                <li className="dropdown">
+                                <li className="dropdown"
+                                    onMouseEnter={this.handleToggle.bind(this)}
+                                    onMouseLeave={this.handleToggle.bind(this)}
+                                >
                                     <a
                                         className="dropdown-toggle"
                                         href="#"
-                                        onClick={this.handleToggle.bind(this)}
                                     >Page 1 <span className="caret"></span></a>
                                     <ul
                                         className="dropdown-menu"
@@ -47,12 +49,10 @@ export default class NavigationBar extends Component {
                                     >
                                         <li><Link
                                             to="/home"
-                                            onClick={this.handleToggle.bind(this)}
                                         >Home</Link>
                                         </li>
                                         <li><Link
                                             to="/rings"
-                                            onClick={this.handleToggle.bind(this)}
                                         >Rings</Link></li>
                                     </ul>
                                 </li>

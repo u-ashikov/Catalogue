@@ -3,11 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="b1f7de93-b356-4003-845d-310b8d97604e" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Components/Common/ShoppingCart.js" afterPath="$PROJECT_DIR$/src/Components/Common/ShoppingCart.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Components/Products/Bracelets/BraceletsController.js" afterPath="$PROJECT_DIR$/src/Components/Products/Bracelets/BraceletsController.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Components/Products/Rings/RingsController.js" afterPath="$PROJECT_DIR$/src/Components/Products/Rings/RingsController.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Components/Products/SingleProduct/ProductDetails.js" afterPath="$PROJECT_DIR$/src/Components/Products/SingleProduct/ProductDetails.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/index.js" afterPath="$PROJECT_DIR$/src/index.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -419,11 +414,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Ulian\Documents\GitHub\Catalogue\public\pictures\earrings" />
       <recent name="C:\Users\Ulian\Documents\GitHub\Catalogue\public\pictures\bracelets" />
       <recent name="C:\Users\Ulian\Documents\GitHub\Catalogue\public\pictures\necklaces" />
       <recent name="C:\Users\Ulian\Documents\GitHub\Catalogue\public\pictures\Category Covers" />
       <recent name="C:\Users\Ulian\Documents\GitHub\Catalogue\public\pictures" />
-      <recent name="C:\Users\Ulian\Documents\GitHub\Catalogue\public" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Ulian\Documents\GitHub\Catalogue\src\styles" />
@@ -528,18 +523,18 @@
       <workItem from="1483619180118" duration="38943000" />
       <workItem from="1483787412828" duration="16492000" />
       <workItem from="1483960919990" duration="13581000" />
-      <workItem from="1484041919809" duration="6780000" />
+      <workItem from="1484041919809" duration="7410000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="204233000" />
+    <option name="totallyTimeSpent" value="204863000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1456" height="876" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19040902" sideWeight="0.4296161" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19040902" sideWeight="0.4296161" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32974428" sideWeight="0.50282085" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />

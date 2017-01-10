@@ -51,7 +51,6 @@ export default class NecklacesController extends Component {
     }
 
     onClickHandler(id,event) {
-        event.preventDefault();
         browserHistory.push('/necklaces/'+id);
     }
 }

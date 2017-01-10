@@ -48,7 +48,6 @@ export default class RingsController extends Component {
     }
 
     onClickHandler(id,event) {
-        event.preventDefault();
         browserHistory.push('/rings/'+id);
     }
 }

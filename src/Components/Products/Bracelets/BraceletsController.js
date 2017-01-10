@@ -51,7 +51,6 @@ export default class BraceletsController extends Component {
     }
 
     onClickHandler(id,event) {
-        event.preventDefault();
         browserHistory.push('/bracelets/'+id);
     }
 }

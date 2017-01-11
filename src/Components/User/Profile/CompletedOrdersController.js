@@ -11,18 +11,28 @@ export default class CompletedOrdersController extends Component {
     }
 
     componentDidMount() {
+        let _self=this;
         let queryData={
             "customerId":sessionStorage.getItem('userId')
         };
         OrderModel.getAllOrdersByUser(queryData)
-            .then(function (response) {
-                console.dir(response);
+            .then(function (orders) {
+                console.dir(orders);
+                let allOrders=[];
+                for (let order of orders) {
+                    allOrders.push(order);
+                }
+                _self.setState({
+                    'orders':allOrders
+                })
             })
     }
 
     render() {
         return (
-            <CompletedOrder/>
+            <CompletedOrder
+                orders={this.state.orders}
+            />
         )
     }
 }

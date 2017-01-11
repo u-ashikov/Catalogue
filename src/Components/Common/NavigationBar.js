@@ -42,8 +42,11 @@ export default class NavigationBar extends Component {
                                     onMouseEnter={this.handleToggle.bind(this)}
                                     onMouseLeave={this.handleToggle.bind(this)}
                                 >
-                                    <Link to="/"
+                                    <Link
                                           className="dropdown-toggle"
+                                          style={{
+                                                  cursor:'pointer'
+                                          }}
                                     >Profile<span className="glyphicon glyphicon-user"></span> <span className="caret"></span></Link>
                                     <ul
                                         className="dropdown-menu"

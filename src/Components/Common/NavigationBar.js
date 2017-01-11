@@ -35,31 +35,33 @@ export default class NavigationBar extends Component {
                                 <li><Link to="/earrings">Earrings</Link></li>
                                 <li><Link to="/about">About</Link></li>
                                 <li><Link to="/contact">Contact</Link></li>
+                            </ul>
+                            <ul className="nav navbar-nav navbar-right">
+                                <li><Link to="/shopping-cart">Cart <span className="glyphicon glyphicon-shopping-cart"></span></Link></li>
                                 <li className="dropdown"
                                     onMouseEnter={this.handleToggle.bind(this)}
                                     onMouseLeave={this.handleToggle.bind(this)}
                                 >
                                     <Link to="/"
-                                        className="dropdown-toggle"
-                                    >Page 1 <span className="caret"></span></Link>
+                                          className="dropdown-toggle"
+                                    >Profile<span className="glyphicon glyphicon-user"></span> <span className="caret"></span></Link>
                                     <ul
                                         className="dropdown-menu"
                                         style={{display: this.state.showItems ? 'block' : 'none' }}
                                     >
-                                        <li><Link
-                                            to="/home"
-                                        >Home</Link>
+                                        <li
+                                            onClick={this.handleToggle.bind(this)}
+                                        ><Link
+                                            to="/my-orders"
+                                            >My Orders</Link>
                                         </li>
-                                        <li><Link
-                                            to="/rings"
-                                        >Rings</Link></li>
+                                        <li
+                                            onClick={this.handleToggle.bind(this)}
+                                        ><Link
+                                            to="/logout"
+                                        >Logout</Link></li>
                                     </ul>
                                 </li>
-                            </ul>
-                            <ul className="nav navbar-nav navbar-right">
-                                <li><Link to="/shopping-cart">Cart <span className="glyphicon glyphicon-shopping-cart"></span></Link></li>
-                                <li><Link to="/shopping-cart">Profile <span className="glyphicon glyphicon-user"></span></Link></li>
-                                <li><Link to="/logout"><span className="glyphicon glyphicon-log-out"></span>Logout</Link></li>
                             </ul>
                         </div>
                     }
@@ -69,14 +71,8 @@ export default class NavigationBar extends Component {
     }
 
     handleToggle(event) {
-       if (this.state.showItems===true) {
-           this.setState({
-               'showItems':false
-           })
-       } else {
-           this.setState({
-               'showItems':true
-           })
-       }
+        this.setState({
+            'showItems':!this.state.showItems
+        });
     }
 }

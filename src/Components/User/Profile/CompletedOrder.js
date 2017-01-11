@@ -1,12 +1,12 @@
 import React, {Component} from 'react';
+import '../../../styles/orders-preview.css';
 
 export default class CompletedOrder extends Component {
     render() {
         return (
-            <div className="container">
+            <div id="orders" className="container">
                 <h2>My Orders</h2>
-                <p>These are Stamat orders!</p>
-                <table className="table table-hover">
+                <table id="orders-table" className="table table-hover">
                     <thead>
                         <tr>
                             <th>Category</th>
@@ -20,7 +20,7 @@ export default class CompletedOrder extends Component {
                     </thead>
                     <tbody>
                         {(this.props.orders).map(order=><tr key={order._id}>
-                            <td>{order.category}</td>
+                            <td>{(order.category[0].toUpperCase()).concat(order.category.slice(1))}</td>
                             <td><img src={`/pictures/${order.category}/${order.code}.jpg`} width='92' height='92' alt={order.name}/></td>
                             <td>{order.name}</td>
                             <td>{Number(order.price).toFixed(2)}</td>

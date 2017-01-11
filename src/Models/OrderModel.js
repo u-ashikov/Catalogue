@@ -8,6 +8,10 @@ let OrderModel={
     getAllOrders:function () {
         let requester=new Requester('Kinvey');
         return requester.getRequest('appdata','orders');
+    },
+    getAllOrdersByUser:function (queryData) {
+        let requester=new Requester('Kinvey');
+        return requester.getRequest('appdata','orders','',queryData);
     }
 };
 

@@ -19,7 +19,7 @@ export default class Requester {
         }
     }
 
-    getRequest(module,uri,id) {
+    getRequest(module,uri,id,queryData) {
         if (id) {
             return $.ajax({
                 method: 'GET',
@@ -28,16 +28,24 @@ export default class Requester {
                 contentType: 'application/json',
                 error:errorHandler.handleAjaxError
             })
-        } else {
+        } else
+            if (queryData) {
+                return $.ajax({
+                    method: 'GET',
+                    url: baseURL + module + '/' + appKey + '/' + uri + `/?query={"customerId":"${queryData.customerId}"}`,
+                    headers:this.authorization,
+                    contentType: 'application/json',
+                    error:errorHandler.handleAjaxError
+                });
+            }
             return $.ajax({
                 method: 'GET',
                 url: baseURL + module + "/" + appKey + '/' + uri,
                 headers: this.authorization,
                 contentType: 'application/json',
                 error:errorHandler.handleAjaxError
-            })
+            });
         }
-    }
 
     postRequest(module,uri,data) {
         return $.ajax({

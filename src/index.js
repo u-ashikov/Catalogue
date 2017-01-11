@@ -9,6 +9,7 @@ import Login from './Components/User/Login/LoginController';
 import Logout from './Components/User/Logout/LogoutController';
 import About from './Components/About/AboutView';
 import Contact from './Components/Contact/ContactView';
+import CompletedOrder from './Components/User/Profile/CompletedOrdersController';
 import OrderInfo from './Components/Order/OrderInfoController';
 import Necklaces from './Components/Products/Necklaces/NecklacesController';
 import Bracelets from './Components/Products/Bracelets/BraceletsController';
@@ -30,6 +31,7 @@ ReactDOM.render(
            <Route name="Register" path='/register' component={Register}/>
            <Route name="Login" path='/login' component={Login}/>
            <Route name="Logout" path='/logout' component={Logout}/>
+           <Route name="My Orders" path='/my-orders' component={CompletedOrder}/>
            <Route name="OrderInfo" path='/confirm-order' component={OrderInfo}/>
            <Route name="ShoppingCart" path='/shopping-cart' component={ShoppingCart}/>
            <Route name="Necklaces" path="/necklaces">

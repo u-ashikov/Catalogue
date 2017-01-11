@@ -39,8 +39,7 @@ export default class NavigationBar extends Component {
                             <ul className="nav navbar-nav navbar-right">
                                 <li><Link to="/shopping-cart">Cart <span className="glyphicon glyphicon-shopping-cart"></span></Link></li>
                                 <li className="dropdown"
-                                    onMouseEnter={this.handleToggle.bind(this)}
-                                    onMouseLeave={this.handleToggle.bind(this)}
+                                    onClick={this.handleToggle.bind(this)}
                                 >
                                     <Link
                                           className="dropdown-toggle"

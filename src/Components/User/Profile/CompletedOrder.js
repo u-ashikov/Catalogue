@@ -12,6 +12,7 @@ export default class CompletedOrder extends Component {
                             <th>Category</th>
                             <th>Image</th>
                             <th>Name</th>
+                            <th>Code</th>
                             <th>Price</th>
                             <th>Ordered</th>
                             <th>Address</th>
@@ -23,6 +24,7 @@ export default class CompletedOrder extends Component {
                             <td>{(order.category[0].toUpperCase()).concat(order.category.slice(1))}</td>
                             <td><img src={`/pictures/${order.category}/${order.code}.jpg`} width='92' height='92' alt={order.name}/></td>
                             <td>{order.name}</td>
+                            <td>{order.code}</td>
                             <td>{Number(order.price).toFixed(2)}</td>
                             <td>{order.orderCount}</td>
                             <td>{order.deliveryAddress}</td>

@@ -4,7 +4,10 @@ import App from './App';
 import Home from './Components/Home/HomeView';
 import Navigation from './Components/Common/NavigationBar';
 import ShoppingCart from './Components/Common/ShoppingCartController';
-import Quantities from './Components/User/Admin/Quantities/QuantitiesController';
+import RingsQuantities from './Components/User/Admin/Quantities/RingsQuantitiesController';
+import EarringsQuantities from './Components/User/Admin/Quantities/EarringsQuantitiesController';
+import BraceletsQuantities from './Components/User/Admin/Quantities/BraceletsQuantitiesController';
+import NecklacesQuantities from './Components/User/Admin/Quantities/NecklacesQuantitiesController';
 import Register from './Components/User/Register/RegisterController';
 import Login from './Components/User/Login/LoginController';
 import Logout from './Components/User/Logout/LogoutController';
@@ -29,10 +32,10 @@ ReactDOM.render(
            <IndexRoute name="Home" component={Home}/>
            <Route name="Home" path='/home' component={Home}/>
            <Route name="Navigation Bar" path='/header' component={Navigation}/>
-           <Route name="Necklaces-Quantity" path='/necklaces-quantity' component={Quantities}/>
-           <Route name="Rings-Quantity" path='/rings-quantity' component={Quantities}/>
-           <Route name="Earrings-Quantity" path='/earrings-quantity' component={Quantities}/>
-           <Route name="Bracelets-Quantity" path='/bracelets-quantity' component={Quantities}/>
+           <Route name="Necklaces-Quantity" path='/necklaces-quantity' component={NecklacesQuantities}/>
+           <Route name="Rings-Quantity" path='/rings-quantity' component={RingsQuantities}/>
+           <Route name="Earrings-Quantity" path='/earrings-quantity' component={EarringsQuantities}/>
+           <Route name="Bracelets-Quantity" path='/bracelets-quantity' component={BraceletsQuantities}/>
            <Route name="Register" path='/register' component={Register}/>
            <Route name="Login" path='/login' component={Login}/>
            <Route name="Logout" path='/logout' component={Logout}/>

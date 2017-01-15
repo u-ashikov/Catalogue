@@ -1,0 +1,26 @@
+#orders-table {
+    background: white;
+    border-radius: 4px;
+    box-shadow: #100a06;
+}
+
+#orders-table > thead> tr> th {
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bolder;
+    height: 40px;
+    line-height: 40px;
+    vertical-align: middle;
+}
+
+#orders-table >tbody > tr > td {
+    text-align: center;
+    vertical-align: middle;
+    height: 80px;
+    line-height: 80px;
+}
+
+
+#orders-table >tbody >tr:hover {
+    background: #cdffc0;
+}

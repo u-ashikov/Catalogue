@@ -18,37 +18,70 @@ export default class NavigationBar extends Component {
                         </div>
                         <div>
                             <ul className="nav navbar-nav">
-                                <li><Link to="/necklaces">Necklaces</Link></li>
-                                <li><Link to="/bracelets">Bracelets</Link></li>
-                                <li><Link to="/rings">Rings</Link></li>
-                                <li><Link to="/earrings">Earrings</Link></li>
-                            </ul>
-                            <ul className="nav navbar-nav navbar-right">
-                                <li className="dropdown"
+                                <li
+                                    className="dropdown"
                                     onClick={this.handleToggle.bind(this)}
                                 >
                                     <Link
-                                        className="dropdown-toggle"
-                                        style={{
-                                            cursor:'pointer'
-                                        }}
-                                    >Profile<span className="glyphicon glyphicon-user"></span> <span className="caret"></span></Link>
+                                        className='dropdown-toggle'
+                                        style={
+                                            {cursor:'pointer'}
+                                        }
+                                    >
+                                        Quantities
+                                        <span className="caret"></span>
+                                    </Link>
                                     <ul
                                         className="dropdown-menu"
-                                        style={{display: this.state.showItems ? 'block' : 'none' }}
+                                        style={{display:this.state.showItems? 'block':'none'}}
                                     >
                                         <li
                                             onClick={this.handleToggle.bind(this)}
-                                        ><Link
-                                            to="/my-orders"
-                                        >My Orders</Link>
+                                        >
+                                            <Link to="/necklaces-quantity">
+                                                Necklaces
+                                            </Link>
                                         </li>
                                         <li
                                             onClick={this.handleToggle.bind(this)}
-                                        ><Link
-                                            to="/logout"
-                                        >Logout</Link></li>
+                                        >
+                                            <Link to="/earrings-quantity">
+                                                Earrings
+                                            </Link>
+                                        </li>
+                                        <li
+                                            onClick={this.handleToggle.bind(this)}
+                                        >
+                                            <Link to="/rings-quantity">
+                                                Rings
+                                            </Link>
+                                        </li>
+                                        <li
+                                            onClick={this.handleToggle.bind(this)}
+                                        >
+                                            <Link to="/bracelets-quantity">
+                                                Bracelets
+                                            </Link>
+                                        </li>
                                     </ul>
+                                </li>
+                                <li>
+                                    <Link to="/all-orders">
+                                        Orders
+                                    </Link>
+                                </li>
+                                <li>
+                                    <Link to="/add-item">
+                                        Add Item
+                                    </Link>
+                                </li>
+                            </ul>
+                            <ul className="nav navbar-nav navbar-right">
+                                <li>
+                                    <Link to="/logout">
+                                        <span className="glyphicon glyphicon-log-out"></span>
+                                        Logout
+                                    </Link>
                                 </li>
                             </ul>
                         </div>

@@ -17,6 +17,7 @@ export default class CompletedOrder extends Component {
                             <th>Ordered</th>
                             <th>Address</th>
                             <th>Total price</th>
+                            <th>Status</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -29,6 +30,7 @@ export default class CompletedOrder extends Component {
                             <td>{order.orderCount}</td>
                             <td>{order.deliveryAddress}</td>
                             <td>{(Number(order.price)*Number(order.orderCount)).toFixed(2)}</td>
+                            <td>{order.status}</td>
                         </tr>)}
                     </tbody>
                 </table>

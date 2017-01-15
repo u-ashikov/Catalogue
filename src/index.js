@@ -8,6 +8,7 @@ import RingsQuantities from './Components/User/Admin/Quantities/RingsQuantitiesC
 import EarringsQuantities from './Components/User/Admin/Quantities/EarringsQuantitiesController';
 import BraceletsQuantities from './Components/User/Admin/Quantities/BraceletsQuantitiesController';
 import NecklacesQuantities from './Components/User/Admin/Quantities/NecklacesQuantitiesController';
+import ReceiveOrder from './Components/User/Admin/Orders/ReceivedOrderController';
 import Register from './Components/User/Register/RegisterController';
 import Login from './Components/User/Login/LoginController';
 import Logout from './Components/User/Logout/LogoutController';
@@ -36,6 +37,7 @@ ReactDOM.render(
            <Route name="Rings-Quantity" path='/rings-quantity' component={RingsQuantities}/>
            <Route name="Earrings-Quantity" path='/earrings-quantity' component={EarringsQuantities}/>
            <Route name="Bracelets-Quantity" path='/bracelets-quantity' component={BraceletsQuantities}/>
+           <Route name="Customers Orders" path='/all-orders' component={ReceiveOrder}/>
            <Route name="Register" path='/register' component={Register}/>
            <Route name="Login" path='/login' component={Login}/>
            <Route name="Logout" path='/logout' component={Logout}/>

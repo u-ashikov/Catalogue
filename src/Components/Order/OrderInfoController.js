@@ -58,7 +58,8 @@ export default class OrderInfoController extends Component {
                     customerId:sessionStorage.getItem('userId'),
                     customerEmail:this.state.email,
                     customerPhone:this.state.phone,
-                    deliveryAddress:this.state.address
+                    deliveryAddress:this.state.address,
+                    status:'processing'
                 };
                 let updatedProduct={
                     name:productInfo.name,

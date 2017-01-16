@@ -7,6 +7,13 @@ export default class ReceivedOrder extends Component {
             <div id="orders-view" className="container">
                     {Object.keys(this.props.orders).map(key=>
                     <div>
+                        <div className="order-info">
+                            <span>Customer: {this.props.orders[key][0].customerName}</span>
+                            <span>Address: {this.props.orders[key][0].deliveryAddress}</span>
+                            <span>Phone :{this.props.orders[key][0].customerPhone}</span>
+                            <span>Email :{this.props.orders[key][0].customerEmail}</span>
+                            <span><button className="process-button">Process</button></span>
+                        </div>
                         <table id="customer-orders" className="table table-hover">
                             <thead>
                             <tr>
@@ -17,11 +24,6 @@ export default class ReceivedOrder extends Component {
                                 <th>Order Count</th>
                                 <th>Price</th>
                                 <th>Total</th>
-                                <th>Customer</th>
-                                <th>Address</th>
-                                <th>Email</th>
-                                <th>Phone</th>
-                                <th>Action</th>
                             </tr>
                             </thead>
                             <tbody>
@@ -34,11 +36,6 @@ export default class ReceivedOrder extends Component {
                                 <td>{order.orderCount}</td>
                                 <td>{order.price}</td>
                                 <td>{order.totalPrice}</td>
-                                <td>{order.customerName}</td>
-                                <td>{order.deliveryAddress}</td>
-                                <td>{order.customerEmail}</td>
-                                <td>{order.customerPhone}</td>
-                                <td><button>Process</button></td>
                             </tr>
                             )}
                             </tbody>

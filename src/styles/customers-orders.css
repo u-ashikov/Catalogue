@@ -1,5 +1,20 @@
-#orders-view {
+.order-info {
+    background: white;
+    font-weight: bold;
+    text-transform: capitalize;
+    margin:10px;
     width: auto;
+    height:40px;
+    padding:10px;
+    border-radius: 10px;
+}
+
+.process-button {
+    float: right;
+}
+
+.order-info > span {
+    padding:20px;
 }
 
 #customer-orders {

@@ -29,7 +29,7 @@ export default class ReceivedOrder extends Component {
                             <tbody>
                             {this.props.orders[key].map(order=>
                             <tr key={order._id}>
-                                <td>Image</td>
+                                <td><img alt={order.name} width='90' height='90' src={`/pictures/${order.category}/${order.code}.jpg`}/></td>
                                 <td>{order.category}</td>
                                 <td>{order.name}</td>
                                 <td>{order.code}</td>

@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b1f7de93-b356-4003-845d-310b8d97604e" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Components/User/Admin/Orders/ReceivedOrder.js" afterPath="$PROJECT_DIR$/src/Components/User/Admin/Orders/ReceivedOrder.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/styles/customers-orders.css" afterPath="$PROJECT_DIR$/src/styles/customers-orders.css" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -21,11 +21,11 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="ReceivedOrder.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ReceivedOrder.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Components/User/Admin/Orders/ReceivedOrder.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="286">
-              <caret line="13" column="48" lean-forward="false" selection-start-line="13" selection-start-column="48" selection-end-line="13" selection-end-column="48" />
+            <state relative-caret-position="374">
+              <caret line="31" column="79" lean-forward="false" selection-start-line="31" selection-start-column="79" selection-end-line="31" selection-end-column="79" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
               </folding>
@@ -33,7 +33,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="customers-orders.css" pinned="false" current-in-tab="true">
+      <file leaf-file-name="customers-orders.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/styles/customers-orders.css">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="352">
@@ -130,8 +130,8 @@
         <option value="$PROJECT_DIR$/src/Components/User/Profile/CompletedOrder.js" />
         <option value="$PROJECT_DIR$/src/Components/Order/OrderInfoController.js" />
         <option value="$PROJECT_DIR$/src/Components/User/Admin/Orders/ReceivedOrderController.js" />
-        <option value="$PROJECT_DIR$/src/Components/User/Admin/Orders/ReceivedOrder.js" />
         <option value="$PROJECT_DIR$/src/styles/customers-orders.css" />
+        <option value="$PROJECT_DIR$/src/Components/User/Admin/Orders/ReceivedOrder.js" />
       </list>
     </option>
   </component>
@@ -514,12 +514,12 @@
       <workItem from="1484126168080" duration="19272000" />
       <workItem from="1484231676224" duration="2324000" />
       <workItem from="1484475205695" duration="20741000" />
-      <workItem from="1484556394273" duration="5839000" />
+      <workItem from="1484556394273" duration="6085000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="262455000" />
+    <option name="totallyTimeSpent" value="262701000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1456" height="876" extended-state="6" />
@@ -894,21 +894,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Components/User/Admin/Orders/ReceivedOrder.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="13" column="48" lean-forward="false" selection-start-line="13" selection-start-column="48" selection-end-line="13" selection-end-column="48" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/styles/customers-orders.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="352">
           <caret line="16" column="20" lean-forward="false" selection-start-line="16" selection-start-column="20" selection-end-line="16" selection-end-column="20" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Components/User/Admin/Orders/ReceivedOrder.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="31" column="79" lean-forward="false" selection-start-line="31" selection-start-column="79" selection-end-line="31" selection-end-column="79" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

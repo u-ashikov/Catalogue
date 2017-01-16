@@ -1,20 +1,20 @@
-.order-info {
-    background: white;
-    font-weight: bold;
-    text-transform: capitalize;
-    margin:10px;
+.order-holder {
     width: auto;
-    height:40px;
-    padding:10px;
+    height: auto;
+    background: white;
     border-radius: 10px;
 }
 
-.process-button {
-    float: right;
+#process-button {
+    float: left;
+    width: 200px;
 }
 
 .order-info > span {
-    padding:20px;
+    display: block;
+    padding: 10px;
+    text-align: left;
+    margin-left:5px;
 }
 
 #customer-orders {

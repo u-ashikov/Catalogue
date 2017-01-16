@@ -5,6 +5,10 @@
     border-radius: 10px;
 }
 
+#orders-view > .order-holder {
+    margin: 25px;
+}
+
 #process-button {
     float: left;
     width: 200px;

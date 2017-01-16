@@ -8,6 +8,7 @@ export default class ReceivedOrder extends Component {
                     {Object.keys(this.props.orders).map(key=>
                     <div className="order-holder">
                         <div className="order-info">
+                            <br/>
                             <span><b>Customer:</b> {this.props.orders[key][0].customerName}</span>
                             <span><b>Address:</b> {this.props.orders[key][0].deliveryAddress}</span>
                             <span><b>Phone:</b> {this.props.orders[key][0].customerPhone}</span>

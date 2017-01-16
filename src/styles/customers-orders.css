@@ -1,0 +1,32 @@
+#orders-view {
+    width: auto;
+}
+
+#customer-orders {
+    background: white;
+    border-radius: 4px;
+    box-shadow: #100a06;
+    table-layout: fixed;
+}
+
+#customer-orders > thead> tr> th {
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    height: 30px;
+    line-height: 30px;
+    vertical-align: middle;
+    font-size: 10pt;
+}
+
+#customer-orders >tbody > tr > td {
+    text-align: center;
+    vertical-align: middle;
+    height: 20px;
+    line-height: 20px;
+}
+
+
+#customer-orders >tbody >tr:hover {
+    background: #cdffc0;
+}

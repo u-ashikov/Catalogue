@@ -1,10 +1,11 @@
 import React, {Component} from 'react';
+import '../../../../styles/customers-orders.css';
 
 export default class ReceivedOrder extends Component {
     render() {
         return (
-            <div className="container">
-                <table className="table table-hover">
+            <div id="orders-view" className="container">
+                <table id="customer-orders" className="table table-hover">
                     <thead>
                         <tr>
                             <th>Image</th>

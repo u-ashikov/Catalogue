@@ -14,7 +14,13 @@ export default class ReceivedOrder extends Component {
                             <span><b>Phone:</b> {this.props.orders[key][0].customerPhone}</span>
                             <span><b>Email:</b> {this.props.orders[key][0].customerEmail}</span>
                             <span><b>Date:</b> {(new Date(Date.parse(this.props.orders[key][0]._kmd.ect))).toString().slice(0,(new Date(Date.parse(this.props.orders[key][0]._kmd.ect))).toString().indexOf('GMT'))}</span>
-                            <span><button id="process-button" className="btn btn-success">Process Order</button></span>
+                            <span><button
+                                id="process-button"
+                                name={key}
+                                className="btn btn-success"
+                                onClick={this.props.onClickHandler}
+                            >
+                                Process Order</button></span>
                         </div>
                         <table id="customer-orders" className="table table-hover">
                             <thead>

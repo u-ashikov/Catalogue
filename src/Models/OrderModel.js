@@ -12,6 +12,10 @@ let OrderModel={
     getAllOrdersByUser:function (queryData) {
         let requester=new Requester('Kinvey');
         return requester.getRequest('appdata','orders','',queryData);
+    },
+    updateOrderStatus:function (orderId,orderData) {
+        let requester=new Requester('Kinvey');
+        return requester.putRequest('appdata','orders',orderData,orderId);
     }
 };
 

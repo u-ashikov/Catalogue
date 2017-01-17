@@ -17,7 +17,6 @@ export default class CompletedOrdersController extends Component {
         };
         OrderModel.getAllOrdersByUser(queryData)
             .then(function (orders) {
-                console.dir(orders);
                 let allOrders=[];
                 for (let order of orders) {
                     allOrders.push(order);

@@ -1,6 +1,9 @@
 import React, {Component} from 'react';
 import ReceivedOrder from './ReceivedOrder';
 import OrderModel from '../../../../Models/OrderModel';
+import {browserHistory} from 'react-router';
+import Alert from 'react-s-alert';
+import 'react-s-alert/dist/s-alert-css-effects/flip.css';
 
 export default class ReceivedOrderController extends Component {
     constructor(props) {
@@ -16,6 +19,9 @@ export default class ReceivedOrderController extends Component {
             .then(function (orders) {
                 let ordersByCustomers={};
                 for (let order of orders) {
+                    if (order.status==='processed') {
+                        continue;
+                    }
                     if (!Object.keys(ordersByCustomers).includes(order.customerId)) {
                         ordersByCustomers[order.customerId]=[];
                     }
@@ -33,7 +39,6 @@ export default class ReceivedOrderController extends Component {
                 _self.setState({
                     'orders':sortedOrders
                 });
-                console.dir(_self.state);
             });
     }
 
@@ -41,7 +46,45 @@ export default class ReceivedOrderController extends Component {
         return (
             <ReceivedOrder
                 orders={this.state.orders}
+                onClickHandler={this.processOrder.bind(this)}
             />
         )
+    }
+
+    processOrder(event) {
+        let _self=this;
+        let customerId=event.target.name;
+        let allOrders=this.state.orders;
+        let processedOrders=allOrders[customerId];
+        delete allOrders[customerId];
+        _self.setState({
+            'orders':allOrders
+        });
+        for (let order of processedOrders) {
+            let data={
+                category:order.category,
+                productId:order.productId,
+                name:order.name,
+                code:order.code,
+                description:order.description,
+                price:order.price,
+                orderCount:order.orderCount,
+                totalPrice:order.totalPrice,
+                customerName:order.customerName,
+                customerId:order.customerId,
+                customerEmail:order.customerEmail,
+                customerPhone:order.customerPhone,
+                deliveryAddress:order.deliveryAddress,
+                status:'processed'
+            };
+            OrderModel.updateOrderStatus(order._id,data);
+        }
+        browserHistory.push('/all-orders');
+        Alert.success("The order was processed successfully!",{
+            position:'top-right',
+            effect:'flip',
+            offset:50,
+            timeout:3000
+        });
     }
 }

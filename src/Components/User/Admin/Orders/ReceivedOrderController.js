@@ -21,8 +21,17 @@ export default class ReceivedOrderController extends Component {
                     }
                     ordersByCustomers[order.customerId].push(order);
                 }
+                let sortedOrders={};
+                let sortedKeys=Object.keys(ordersByCustomers).sort(function (customerA,customerB) {
+                    let dateA=new Date(ordersByCustomers[customerA][0]._kmd.ect);
+                    let dateB=new Date(ordersByCustomers[customerB][0]._kmd.ect);
+                    return dateA-dateB;
+                });
+                for (let key of sortedKeys) {
+                    sortedOrders[key]=ordersByCustomers[key];
+                }
                 _self.setState({
-                    'orders':ordersByCustomers
+                    'orders':sortedOrders
                 });
                 console.dir(_self.state);
             });

@@ -49,3 +49,7 @@
 #customer-orders >tbody >tr:hover {
     background: #cdffc0;
 }
+
+.totalRow {
+    height: 50px;
+}

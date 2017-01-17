@@ -40,6 +40,17 @@ export default class ReceivedOrder extends Component {
                                 <td>{order.totalPrice}</td>
                             </tr>
                             )}
+                            <tr className="totalRow">
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td><b>GRAND TOTAL:</b></td>
+                                <td><b>{this.props.orders[key].reduce((total,order) =>
+                                    Number(Number(total)+Number(order.totalPrice)).toFixed(2),0
+                                )}</b></td>
+                            </tr>
                             </tbody>
                         </table>
                     </div>

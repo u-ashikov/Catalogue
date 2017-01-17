@@ -3,6 +3,7 @@ import '../../../../styles/category-quantites.css';
 
 export default class CategoryQuantitiesView extends Component {
     render() {
+        if (sessionStorage.getItem('authToken') && sessionStorage.getItem('userId')==='5877a8ee350958684b335a93') {
             return (
                 <div id="order" className="container">
                     <h2>{this.props.categoryName.toUpperCase()[0]+this.props.categoryName.slice(1)}</h2>
@@ -30,4 +31,8 @@ export default class CategoryQuantitiesView extends Component {
                 </div>
             )
         }
+        return (
+           <h2>You don't have permission to view this section!</h2>
+        )
+    }
 }

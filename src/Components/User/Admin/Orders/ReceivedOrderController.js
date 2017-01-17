@@ -47,22 +47,27 @@ export default class ReceivedOrderController extends Component {
     }
 
     render() {
-        if (this.state.loaded) {
-            if (Object.keys(this.state.orders).length===0) {
+        if (sessionStorage.getItem('authToken') && sessionStorage.getItem('userId')==='5877a8ee350958684b335a93') {
+            if (this.state.loaded) {
+                if (Object.keys(this.state.orders).length===0) {
+                    return (
+                        <div id="no-orders" className="container">
+                            <p>There are no unprocessed orders!</p>
+                        </div>
+                    )
+                }
                 return (
-                    <div id="no-orders" className="container">
-                        <p>There are no unprocessed orders!</p>
-                    </div>
+                    <ReceivedOrder
+                        orders={this.state.orders}
+                        onClickHandler={this.processOrder.bind(this)}
+                    />
                 )
             }
-            return (
-                <ReceivedOrder
-                    orders={this.state.orders}
-                    onClickHandler={this.processOrder.bind(this)}
-                />
-            )
+            return null;
         }
-        return null;
+        return (
+            <h2>You don't have permission to view this section!</h2>
+        )
     }
 
     processOrder(event) {

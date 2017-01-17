@@ -8,8 +8,9 @@ import 'react-s-alert/dist/s-alert-css-effects/flip.css';
 export default class ReceivedOrderController extends Component {
     constructor(props) {
         super(props);
-        this.state={
-            'orders':{}
+        this.state = {
+            'orders': {},
+            'loaded':false
         }
     }
 
@@ -17,6 +18,9 @@ export default class ReceivedOrderController extends Component {
         let _self=this;
         OrderModel.getAllOrders()
             .then(function (orders) {
+                _self.setState({
+                    'loaded':true
+                });
                 let ordersByCustomers={};
                 for (let order of orders) {
                     if (order.status==='processed') {
@@ -43,12 +47,22 @@ export default class ReceivedOrderController extends Component {
     }
 
     render() {
-        return (
-            <ReceivedOrder
-                orders={this.state.orders}
-                onClickHandler={this.processOrder.bind(this)}
-            />
-        )
+        if (this.state.loaded) {
+            if (Object.keys(this.state.orders).length===0) {
+                return (
+                    <div id="no-orders" className="container">
+                        <p>There are no unprocessed orders!</p>
+                    </div>
+                )
+            }
+            return (
+                <ReceivedOrder
+                    orders={this.state.orders}
+                    onClickHandler={this.processOrder.bind(this)}
+                />
+            )
+        }
+        return null;
     }
 
     processOrder(event) {

@@ -53,3 +53,18 @@
 .totalRow {
     height: 50px;
 }
+
+#no-orders {
+    background: white;
+    border-radius:10px;
+}
+
+#no-orders > p {
+    margin-top:10px;
+    height: 40px;
+    line-height: 40px;
+    vertical-align: middle;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight:bolder;
+}

@@ -1,0 +1,44 @@
+.add-item {
+    background: #ddbdc0;
+    box-shadow: 12px 10px 5px #888888;
+}
+
+.add-item > div >label {
+    float: left;
+    color: black;
+    text-transform: uppercase;
+}
+
+.add-item > div > textarea {
+    height: 200px;
+}
+
+.add-item > div {
+    padding:10px 18px 10px 18px;
+    margin:18px;
+}
+
+.add-item {
+    border-radius:16px;
+}
+
+.add-item > .heading {
+    padding:18px 10px 10px 10px;
+    color: black;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.add-item > div > button {
+    width: 530px;
+    background-color: rgba(219, 0, 192, 0.53);
+    margin-bottom: 18px;
+    height: 48px;
+    border: white;
+    text-transform: uppercase;
+}
+
+.add-item > div > button:hover {
+    background-color: rgba(210, 51, 216, 0.95);
+    box-shadow: 8px 8px 8px #888888;
+}

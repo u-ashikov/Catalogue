@@ -36,6 +36,8 @@
     height: 48px;
     border: white;
     text-transform: uppercase;
+    color:white;
+    border-radius: 10px;
 }
 
 .add-item > div > button:hover {

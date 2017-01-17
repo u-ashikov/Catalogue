@@ -6,13 +6,14 @@ export default class ReceivedOrder extends Component {
         return (
             <div id="orders-view" className="container">
                     {Object.keys(this.props.orders).map(key=>
-                    <div className="order-holder">
+                    <div key={key} className="order-holder">
                         <div className="order-info">
                             <br/>
                             <span><b>Customer:</b> {this.props.orders[key][0].customerName}</span>
                             <span><b>Address:</b> {this.props.orders[key][0].deliveryAddress}</span>
                             <span><b>Phone:</b> {this.props.orders[key][0].customerPhone}</span>
                             <span><b>Email:</b> {this.props.orders[key][0].customerEmail}</span>
+                            <span><b>Date:</b> {(new Date(Date.parse(this.props.orders[key][0]._kmd.ect))).toString().slice(0,(new Date(Date.parse(this.props.orders[key][0]._kmd.ect))).toString().indexOf('GMT'))}</span>
                             <span><button id="process-button" className="btn btn-success">Process Order</button></span>
                         </div>
                         <table id="customer-orders" className="table table-hover">
